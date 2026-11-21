@@ -921,6 +921,25 @@ function initMobileMenu() {
       });
     });
   }
+
+  // Smooth navbar band background transition when scrolling past dark hero on About page
+  const aboutHero = document.getElementById("aboutHero");
+  const mainNavbarBand = document.getElementById("mainNavbarBand");
+  if (aboutHero && mainNavbarBand && !document.getElementById("home")) {
+    const updateAboutNavBand = () => {
+      const rect = aboutHero.getBoundingClientRect();
+      if (rect.bottom <= 80) {
+        mainNavbarBand.classList.remove("bg-transparent");
+        mainNavbarBand.classList.add("bg-primary-container/95", "backdrop-blur-md", "shadow-[0_8px_30px_rgba(0,18,15,0.28)]");
+      } else {
+        mainNavbarBand.classList.add("bg-transparent");
+        mainNavbarBand.classList.remove("bg-primary-container/95", "backdrop-blur-md", "shadow-[0_8px_30px_rgba(0,18,15,0.28)]");
+      }
+    };
+    updateAboutNavBand();
+    window.addEventListener("scroll", updateAboutNavBand, { passive: true });
+    window.addEventListener("resize", updateAboutNavBand);
+  }
 }
 
 function injectBookingModal() {

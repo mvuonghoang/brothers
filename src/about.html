@@ -7,10 +7,10 @@
   <link rel="icon" type="image/jpeg" href="assets/images/brand/logo.jpg">
   <!-- Material Symbols Outlined -->
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
-  <!-- Google Fonts: Playfair Display, Plus Jakarta Sans & Kanit -->
+  <!-- Google Fonts: Playfair Display, Plus Jakarta Sans, Montserrat & Kanit -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
-  <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,300;0,400;0,500;0,600;1,300&amp;family=Playfair+Display:ital,wght@0,400..700;1,400..700&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,300;0,400;0,500;0,600;1,300&amp;family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;family=Playfair+Display:ital,wght@0,400..700;1,400..700&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
   <!-- Tailwind CSS CDN with plugins -->
   <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
   <!-- Tailwind Theme Configuration verbatim -->
@@ -97,7 +97,14 @@
             "display-lg-mobile": ["Playfair Display"],
             "title-lg": ["Plus Jakarta Sans"],
             "body-lg": ["Plus Jakarta Sans"],
-            "body-sm": ["Plus Jakarta Sans"]
+            "body-sm": ["Plus Jakarta Sans"],
+            "montserrat": ["Montserrat", "sans-serif"],
+            "rossce": ["Rossce", "serif"],
+            "rolend": ["Rolend", "serif"],
+            "vireon": ["Vireon", "sans-serif"],
+            "windels": ["Windels", "serif"],
+            "haggia": ["Haggia", "Playfair Display", "serif"],
+            "bright-guard": ["TRT Bright Guard", "Playfair Display", "serif"]
           },
           "fontSize": {
             "headline-lg-mobile": ["26px", { "lineHeight": "34px", "fontWeight": "500" }],
@@ -121,224 +128,367 @@
 </head>
 <body class="bg-surface text-on-surface antialiased selection:bg-secondary-fixed selection:text-on-secondary-fixed min-h-screen flex flex-col font-body-md text-body-md">
   <!-- ========================================================================= -->
-  <!-- 1. TOP APP BAR (Shared Component)                                         -->
+  <!-- 1. HEADER / NAVIGATION BAR (Floating Capsule Navbar)                      -->
   <!-- ========================================================================= -->
-  <header class="docked full-width top-0 sticky z-50 bg-surface/95 dark:bg-primary/95 backdrop-blur-md border-b border-outline-variant/30 dark:border-primary-container shadow-sm dark:shadow-none transition-all duration-200">
-    <div class="max-w-7xl mx-auto px-6 md:px-12 flex justify-between items-center h-20">
-      <!-- Brand Logo Left -->
-      <a aria-label="Brothers Nails &amp; Lashes Home" class="flex items-center gap-3 group focus:outline-none" href="index.html">
-        <img alt="Brothers Nails &amp; Lashes" class="h-10 md:h-12 w-auto object-contain brand-logo-header transition-transform duration-300 group-hover:scale-105" src="assets/images/brand/horizontal-logo-transparent.png">
-      </a>
-      <!-- Desktop Nav Items (Active: About) -->
-      <nav class="hidden md:flex items-center space-x-8 font-label-lg text-label-lg tracking-wider">
-        <a class="text-on-surface-variant dark:text-surface-dim hover:text-secondary dark:hover:text-secondary-fixed transition-colors duration-200" href="index.html">Home</a>
-        <a class="text-secondary dark:text-secondary-fixed font-semibold border-b-2 border-secondary dark:border-secondary-fixed pb-1 transition-colors duration-200" href="about.html">About</a>
-        <a class="text-on-surface-variant dark:text-surface-dim hover:text-secondary dark:hover:text-secondary-fixed transition-colors duration-200" href="services.html">Services</a>
-        <a class="text-on-surface-variant dark:text-surface-dim hover:text-secondary dark:hover:text-secondary-fixed transition-colors duration-200" href="gallery.html">Gallery</a>
-        <a class="text-on-surface-variant dark:text-surface-dim hover:text-secondary dark:hover:text-secondary-fixed transition-colors duration-200" href="contact.html">Contact</a>
-      </nav>
-      <!-- Right Action CTA -->
-      <div class="flex items-center gap-4">
-        <a class="gold-shimmer text-primary font-title-md text-title-md px-6 py-2.5 rounded-lg shadow-sm hover:shadow-md transition-all duration-300 transform hover:-translate-y-0.5 active:scale-[0.98] border border-secondary-fixed-dim/40 flex items-center gap-2 group" href="#book" data-booking>
-          <span class="font-semibold tracking-wide">Book Now</span>
-          <span class="material-symbols-outlined text-base transition-transform group-hover:translate-x-1" data-icon="calendar_month">calendar_month</span>
+  <header id="mainNavbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+    <div id="mainNavbarBand" class="bg-transparent transition-all duration-300">
+      <div class="max-w-7xl mx-auto px-6 md:px-12 flex justify-between items-center h-20">
+        <!-- Brand Logo Left -->
+        <a aria-label="Brothers Nails &amp; Lashes Home" class="flex items-center gap-3 group focus:outline-none" href="index.html">
+          <img alt="Brothers Nails &amp; Lashes" class="h-12 md:h-16 lg:h-[68px] w-auto object-contain brightness-110 drop-shadow-[0_2px_8px_rgba(0,18,15,0.5)] transition-transform duration-300 group-hover:scale-105" src="assets/images/brand/horizontal-logo-transparent.png">
         </a>
-        <!-- Mobile Menu Trigger -->
-        <button aria-label="Open Navigation" class="md:hidden p-2 text-primary focus:outline-none" id="mobileMenuBtn">
-          <span class="material-symbols-outlined text-2xl">menu</span>
-        </button>
+        <!-- Centered Pill Capsule Nav Links (Active: About) -->
+        <nav id="desktopNavCapsule" class="hidden md:flex items-center gap-1 bg-[#2b5e53]/65 backdrop-blur-md border border-white/15 px-2 py-1.5 rounded-[9999px] shadow-[0_8px_28px_rgba(0,18,15,0.35)] font-label-lg text-[13px] font-normal tracking-wider">
+          <a class="nav-pill-tab px-5 py-2 rounded-[9999px] text-[#ffe088] hover:text-[#f5c84c] hover:bg-primary/40 font-normal transition-all duration-200 transform hover:-translate-y-0.5 hover:scale-105" href="index.html">Home</a>
+          <a class="nav-pill-tab px-5 py-2 rounded-[9999px] bg-primary text-[#f5c84c] font-normal shadow-md transition-all duration-200 transform hover:-translate-y-0.5 hover:scale-105" href="about.html">About</a>
+          <a class="nav-pill-tab px-5 py-2 rounded-[9999px] text-[#ffe088] hover:text-[#f5c84c] hover:bg-primary/40 font-normal transition-all duration-200 transform hover:-translate-y-0.5 hover:scale-105" href="services.html">Services</a>
+          <a class="nav-pill-tab px-5 py-2 rounded-[9999px] text-[#ffe088] hover:text-[#f5c84c] hover:bg-primary/40 font-normal transition-all duration-200 transform hover:-translate-y-0.5 hover:scale-105" href="gallery.html">Gallery</a>
+          <a class="nav-pill-tab px-5 py-2 rounded-[9999px] text-[#ffe088] hover:text-[#f5c84c] hover:bg-primary/40 font-normal transition-all duration-200 transform hover:-translate-y-0.5 hover:scale-105" href="contact.html">Contact</a>
+        </nav>
+        <!-- Right Action CTA (Pill with Circular Arrow Badge, no search icon) -->
+        <div class="flex items-center gap-4">
+          <a class="hero-cta-primary gold-shimmer text-primary font-montserrat text-xs pl-[18px] pr-1.5 py-1.5 rounded-[9999px] shadow-md flex items-center gap-2.5 group" href="https://book.gocheckin.net/v3/nails/brothers-nails-and-lashes-20136/choose-service" target="_blank" rel="noopener noreferrer">
+            <span class="font-bold tracking-wider">BOOK NOW</span>
+            <span class="w-[26px] h-[26px] rounded-[9999px] bg-primary text-secondary-fixed flex items-center justify-center transition-transform duration-300 group-hover:translate-x-0.5">
+              <span class="material-symbols-outlined text-[13px]">arrow_forward</span>
+            </span>
+          </a>
+          <!-- Mobile Menu Toggle Button -->
+          <button aria-label="Toggle Navigation Menu" class="md:hidden p-2 text-secondary-fixed focus:outline-none" id="mobileMenuBtn">
+            <span class="material-symbols-outlined text-2xl" data-icon="menu">menu</span>
+          </button>
+        </div>
       </div>
     </div>
-    <!-- Mobile Drawer / Dropdown -->
-    <div class="hidden md:hidden bg-surface-container-lowest border-b border-outline-variant/30 px-6 py-6 transition-all" id="mobileMenu">
-      <div class="flex flex-col space-y-4 font-label-lg text-label-lg">
-        <a class="text-on-surface-variant hover:text-primary py-1" href="index.html">Home</a>
-        <a class="text-secondary font-semibold py-1" href="about.html">About</a>
-        <a class="text-on-surface-variant hover:text-primary py-1" href="services.html">Services</a>
-        <a class="text-on-surface-variant hover:text-primary py-1" href="gallery.html">Gallery</a>
-        <a class="text-on-surface-variant hover:text-primary py-1" href="contact.html">Contact</a>
+
+    <!-- Mobile Navigation Drawer -->
+    <div class="hidden md:hidden bg-primary-container/95 backdrop-blur-md shadow-[0_12px_32px_rgba(0,18,15,0.5)] px-6 py-6 transition-all" id="mobileMenu">
+      <div class="flex flex-col space-y-4 font-label-lg text-[13px] font-normal">
+        <a class="text-[#ffe088] hover:text-[#d4a024] font-normal py-1" href="index.html">Home</a>
+        <a class="text-[#d4a024] font-normal py-1" href="about.html">About</a>
+        <a class="text-[#ffe088] hover:text-[#d4a024] font-normal py-1" href="services.html">Services</a>
+        <a class="text-[#ffe088] hover:text-[#d4a024] font-normal py-1" href="gallery.html">Gallery</a>
+        <a class="text-[#ffe088] hover:text-[#d4a024] font-normal py-1" href="contact.html">Contact</a>
       </div>
     </div>
   </header>
 
   <main class="flex-grow">
     <!-- ========================================================================= -->
-    <!-- 2. HERO SECTION: EDITORIAL SANCTUARY                                       -->
+    <!-- 2. HERO SECTION: SPLIT EDITORIAL VISION (Inspired by Reference Slide)     -->
     <!-- ========================================================================= -->
-    <section class="relative pt-12 pb-20 md:pt-20 md:pb-28 overflow-hidden">
-      <!-- Decorative Desert Sanctuary Ambient Lighting -->
-      <div class="absolute top-0 right-1/4 w-96 h-96 bg-secondary-fixed/15 rounded-full blur-3xl pointer-events-none -z-10"></div>
-      <div class="absolute bottom-10 left-10 w-80 h-80 bg-primary-fixed-dim/20 rounded-full blur-3xl pointer-events-none -z-10"></div>
-      <div class="max-w-7xl mx-auto px-6 md:px-12">
-        <!-- Top Hero Header & Arch Visual Showcase -->
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center mb-16">
-          <!-- Editorial Intro Left -->
-          <div class="lg:col-span-7 space-y-6">
-            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-surface-container border border-secondary-fixed-dim/40 text-on-secondary-container font-label-sm text-label-sm">
-              <span class="material-symbols-outlined text-secondary text-sm">spa</span>
-              <span class="tracking-widest uppercase">La Quinta • Coachella Valley</span>
-            </div>
-            <h1 class="hidden md:block font-display-lg text-display-lg text-primary tracking-tight">
-              Our Story &amp; <span class="italic font-normal text-secondary">Sanctuary</span>
+    <section id="aboutHero" class="relative min-h-screen w-full bg-[#001612] text-[#f4efea] overflow-hidden border-b border-[#ffe088]/15">
+      <div class="grid grid-cols-1 lg:grid-cols-12 min-h-screen">
+        
+        <!-- LEFT PANEL: Editorial Vision Statement & Metrics (7 cols) -->
+        <div class="lg:col-span-7 relative flex flex-col justify-between px-6 sm:px-12 md:px-16 lg:px-16 xl:px-24 pt-24 pb-16 lg:pt-24 lg:pb-28 border-b lg:border-b-0 lg:border-r border-[#ffe088]/10 overflow-hidden">
+          <!-- Warm Emerald & Gold Side Ambient Glow (mirrors the left radial glow in reference) -->
+          <div class="absolute inset-0 pointer-events-none" style="background: radial-gradient(ellipse 65% 58% at 0% 56%, rgba(223, 183, 108, 0.24) 0%, rgba(8, 52, 45, 0.62) 46%, rgba(0, 22, 18, 0.98) 82%);"></div>
+          <div class="absolute -left-24 top-1/3 w-96 h-96 rounded-full bg-[#dfb76c]/15 blur-[110px] pointer-events-none"></div>
+
+          <!-- Center Story Headline & Editorial Description -->
+          <div class="relative z-10 my-8 lg:my-auto max-w-2xl space-y-8">
+            <h1 class="font-haggia text-4xl sm:text-5xl md:text-[54px] xl:text-[60px] font-normal text-[#f4efea] leading-[1.12] tracking-tight drop-shadow-md">
+              The <span class="italic font-normal text-[#f5d076] inline-block mr-2.5 sm:mr-3.5">BROTHERS</span> Story
             </h1>
-            <h1 class="block md:hidden font-display-lg-mobile text-display-lg-mobile text-primary tracking-tight">
-              Our Story &amp; <span class="italic font-normal text-secondary">Sanctuary</span>
-            </h1>
-            <p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl leading-relaxed">
-              Born beneath the warm shadows of the Santa Rosa Mountains, Brothers Nails &amp; Lashes was founded with a singular conviction: beauty rituals should never be rushed, impersonal, or compromised. We set out to design a restful haven where bespoke craftsmanship, medical-grade hygiene, and desert serenity merge seamlessly.
-            </p>
-            <div class="pt-2 flex flex-wrap items-center gap-6">
-              <a class="inline-flex items-center gap-2 px-8 py-3.5 rounded-full bg-primary-container text-surface hover:bg-primary font-label-lg text-label-lg transition-all duration-200 border border-secondary-fixed/30 shadow-md" href="#story-manifesto">
-                <span>Explore Our Heritage</span>
-                <span class="material-symbols-outlined text-secondary-fixed text-lg">arrow_downward</span>
-              </a>
-              <div class="flex items-center gap-3">
-                <div class="flex -space-x-2">
-                  <div class="w-10 h-10 rounded-full border-2 border-surface bg-primary-container flex items-center justify-center text-secondary-fixed text-xs font-semibold">5★</div>
-                  <div class="w-10 h-10 rounded-full border-2 border-surface bg-surface-container-high flex items-center justify-center text-primary text-xs">
-                    <span class="material-symbols-outlined text-sm text-secondary">verified</span>
-                  </div>
-                </div>
-                <div class="text-left">
-                  <p class="font-title-md text-title-md text-primary leading-tight">Premier Rated</p>
-                  <p class="font-label-sm text-label-sm text-on-surface-variant">Coachella Valley's Choice</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- Hero Organic Visual Frame Right -->
-          <div class="lg:col-span-5 relative">
-            <div class="relative mx-auto max-w-sm sm:max-w-md lg:max-w-none">
-              <div class="arch-frame overflow-hidden aspect-[4/5] shadow-2xl border-4 border-surface-container-lowest relative z-10 bg-surface-container">
-                <img class="w-full h-full object-cover transform hover:scale-105 transition-transform duration-700 ease-out" data-alt="An opulent luxury salon interior in La Quinta California with floor-to-ceiling arched glass windows, lush palm greenery, warm alabaster plaster walls, and custom gold-trimmed velvet stations." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAf2ImxF21mgK6gHuw26Zb9zwIf17AQdPwkJO2n_LvNYQ27Y528H1p1e31lutZwuceGPy01YmYf3qAk_d6nvVD-hBnOpkRef1g8fbnnKwQ4g8DZxla7Qe2OMrYWbMXoJtDNG9DP2d7xIL2U9OaIvx5o5oxc0nzR1LtLYc8-OMkZf0zS6_glwC3L0aSPxtk0CBGlS43QyXBeBNjIVjAkMc7lr0Pnnl6ASz1rYuUHPiw">
-                <div class="absolute inset-0 bg-gradient-to-t from-primary-container/60 via-transparent to-transparent"></div>
-                <div class="absolute bottom-6 left-6 right-6 text-surface">
-                  <p class="font-headline-md text-headline-md font-serif text-secondary-fixed">The Desert Atelier</p>
-                  <p class="font-body-sm text-body-sm text-surface/90">Curated serenity in the heart of La Quinta</p>
-                </div>
-              </div>
-              <div class="absolute -bottom-6 -left-6 z-20 bg-surface-container-lowest p-4 rounded-2xl shadow-xl border border-secondary/20 flex items-center gap-3.5 max-w-[220px]">
-                <div class="w-11 h-11 rounded-full bg-primary-container flex items-center justify-center text-secondary-fixed">
-                  <span class="material-symbols-outlined text-xl">self_improvement</span>
-                </div>
-                <div>
-                  <p class="font-title-md text-title-md text-primary leading-tight">Bespoke Rituals</p>
-                  <p class="font-label-sm text-label-sm text-on-surface-variant">Crafted For You</p>
-                </div>
-              </div>
-              <div class="absolute -top-6 -right-6 w-32 h-32 border border-secondary-fixed-dim/40 rounded-full pointer-events-none -z-0"></div>
+            <div class="font-body-lg text-[18px] sm:text-[20px] md:text-[22px] text-[#f4efea]/85 leading-[1.8] sm:leading-[1.85] md:leading-[1.85] max-w-2xl space-y-5">
+              <p>
+                After more than six years in the nail industry, we realized our guests wanted more than just a pretty finish — they deserved thoughtful, unhurried care and an experience that truly helps them unwind.
+              </p>
+              <p>
+                Known for creating the most artistic nail designs, BROTHERS was built to be more than a salon. It is a welcoming space where every guest can express their individuality, truly be themselves, and take dedicated time to care for their mental well-being.
+              </p>
             </div>
           </div>
         </div>
 
-        <!-- Expanded Narrative: Origins, Desert Roots & Deep Craftsmanship -->
-        <div class="pt-12 border-t border-outline-variant/30 space-y-16" id="story-manifesto">
-          <!-- Dual-Column Origin Chronicle -->
-          <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
-            <div class="lg:col-span-5 space-y-4">
-              <span class="font-label-lg text-label-lg tracking-widest uppercase text-secondary">The Genesis</span>
-              <h2 class="font-headline-lg text-headline-lg text-primary tracking-tight">
-                Redefining Palm Desert Wellness with Intention
-              </h2>
-              <div class="w-16 h-0.5 bg-secondary-fixed-dim mt-2"></div>
-              <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed pt-2">
-                When Brothers Nails &amp; Lashes opened at 78982 CA-111 in La Quinta, our vision was to transcend the typical, hurried salon experience. We envisioned an architectural and sensory sanctuary where guests are welcomed by name, embraced by tranquil acoustics, and enveloped in unhurried elegance.
-              </p>
+        <!-- RIGHT PANEL: Atmospheric Spotlight Visual & Quote Overlay (5 cols) -->
+        <div class="lg:col-span-5 relative min-h-[560px] lg:min-h-screen flex flex-col justify-end p-5 sm:p-8 lg:p-10 overflow-hidden bg-[#04221c]">
+          <!-- Warm Gold & Emerald Radial Spotlight Backdrop -->
+          <div class="absolute inset-0 pointer-events-none" style="background: radial-gradient(circle at 52% 34%, rgba(223, 183, 108, 0.36) 0%, rgba(8, 52, 45, 0.88) 52%, #001410 95%);"></div>
+
+          <!-- Decorative Concentric Thin Circle Arc (matches reference background ring) -->
+          <div class="absolute top-6 left-1/2 -translate-x-1/2 w-[112%] aspect-square rounded-full border border-[#ffe088]/15 pointer-events-none z-[1]"></div>
+          <div class="absolute top-16 left-1/2 -translate-x-1/2 w-[92%] aspect-square rounded-full border border-[#ffe088]/[0.07] pointer-events-none z-[1]"></div>
+
+          <!-- Founders Portrait Visual Blended into Backdrop -->
+          <div class="absolute inset-0 z-[2] overflow-hidden">
+            <img
+              class="w-full h-full object-cover object-[53%_18%] scale-[1.06] transition-transform duration-1000 ease-out hover:scale-[1.09]"
+              alt="Founders of Brothers Nails &amp; Lashes in La Quinta"
+              src="assets/images/about/founders/founders.png"
+            >
+            <!-- Minimal bottom gradient only behind the text so the portrait stays clear and vivid -->
+            <div class="absolute inset-x-0 bottom-0 h-2/5 bg-gradient-to-t from-[#001410]/90 via-[#001612]/45 to-transparent"></div>
+          </div>
+
+          <!-- Bottom Quote Overlay Content -->
+          <div class="relative z-10 w-fit max-w-[320px] sm:max-w-[380px] mx-auto text-center pt-44 pb-4 sm:pb-5 lg:pb-6">
+            <div class="relative bg-[#001a15]/72 backdrop-blur-md border border-[#ffe088]/35 rounded-[14px] px-5 py-2.5 sm:px-6 sm:py-3 shadow-[0_14px_36px_rgba(0,12,10,0.55)]">
+              <span aria-hidden="true" class="absolute -top-3 right-4 w-6 h-6 rounded-full bg-[#001a15] border border-[#ffe088]/45 flex items-center justify-center text-[#ffe088] shadow-sm">
+                <span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">format_quote</span>
+              </span>
+              <blockquote class="font-headline-lg italic text-[15px] sm:text-[17px] xl:text-[18px] leading-[1.4] tracking-[-0.01em] text-[#f4efea] drop-shadow-[0_2px_8px_rgba(0,14,11,0.75)] text-balance">
+                “Beauty begins the moment you decide to <span class="text-[#ffe088] font-medium">be yourself.</span>”
+              </blockquote>
             </div>
-            <div class="lg:col-span-7 space-y-6">
-              <p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
-                Drawing inspiration from the serene desert landscape, every detail of our studio has been curated to inspire restorative calm. From non-toxic botanical formulations and sterile hospital-grade autoclaves to custom ergonomic lounger suites, every appointment is executed with precision artistry.
-              </p>
-              <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
-                Whether crafting meticulously detailed manicures with reinforced rubber base or builder gel architecture, or designing tailored lash mappings that complement your natural bone structure, our licensed specialists practice beauty as an authentic personal renewal ritual.
-              </p>
-              <!-- 3 Feature Highlights in Grid -->
-              <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-4">
-                <div class="bg-surface-container-low p-5 rounded-2xl border border-secondary-fixed-dim/30">
-                  <span class="material-symbols-outlined text-secondary text-2xl mb-2">handshake</span>
-                  <p class="font-title-md text-title-md text-primary">Tailored Care</p>
-                  <p class="font-body-sm text-body-sm text-on-surface-variant mt-1">One-on-one attentive consultations focused entirely on you.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- 3. THE BROTHERS STANDARDS SECTION (Sticky Split-Screen & Vertical Ledger) -->
+    <!-- ========================================================================= -->
+    <section id="brothers-standards" class="relative py-24 md:py-32 overflow-x-clip bg-[#f4efea] border-b border-secondary-fixed-dim/25">
+      <!-- Subtle Ambient Glows -->
+      <div aria-hidden="true" class="absolute inset-0 overflow-hidden pointer-events-none">
+        <div class="absolute -top-24 right-1/4 w-96 h-96 bg-secondary-fixed/20 rounded-full blur-3xl"></div>
+        <div class="absolute -bottom-24 left-1/4 w-96 h-96 bg-primary-fixed-dim/20 rounded-full blur-3xl"></div>
+      </div>
+
+      <div class="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
+        <!-- Centered Section Header at Top -->
+        <div class="max-w-3xl mx-auto text-center space-y-3.5 mb-14 md:mb-16">
+          <h2 class="font-haggia text-3xl sm:text-4xl md:text-5xl text-primary font-normal tracking-tight leading-tight sm:whitespace-nowrap">
+            The <span class="italic font-normal text-secondary inline-block mr-3 sm:mr-4">BROTHERS</span>Standards
+          </h2>
+          <p class="font-body-md sm:font-body-lg text-sm sm:text-base text-on-surface-variant/85 tracking-wide max-w-xl mx-auto">
+            Everything we uphold behind the scenes so every visit feels effortless
+          </p>
+          <div class="w-16 h-0.5 bg-[#c5a059] mx-auto"></div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-start">
+
+          <!-- LEFT COLUMN (6 cols): Sticky Staggered 4-Photo Editorial Collage -->
+          <div class="lg:col-span-6 lg:sticky lg:top-24">
+            <div class="w-full max-w-[465px] lg:max-w-[485px] xl:max-w-[510px] mx-auto lg:mx-0">
+              <!-- Row 1: Tall left portrait + shorter bottom-aligned right portrait -->
+              <div class="flex items-end gap-2.5 pl-[8%] pr-[3%]">
+                <!-- Photo 1: standard1.png -->
+                <div class="group relative w-[60%] aspect-[4/4.8] overflow-hidden rounded-[4px] bg-primary-container/10 shadow-sm ring-1 ring-[#c5a059]/25">
+                  <img
+                    src="assets/images/about/standards/standard1.png"
+                    alt="Hospital-Grade Hygiene &amp; Precision Manicure Care at Brothers Nails &amp; Lashes"
+                    class="w-full h-full object-cover object-[50%_45%] transition-transform duration-700 ease-out group-hover:scale-105"
+                    loading="lazy"
+                  >
+                  <div class="absolute inset-0 bg-gradient-to-t from-[#001e19]/45 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
                 </div>
-                <div class="bg-surface-container-low p-5 rounded-2xl border border-secondary-fixed-dim/30">
-                  <span class="material-symbols-outlined text-secondary text-2xl mb-2">clean_hands</span>
-                  <p class="font-title-md text-title-md text-primary">Purity Standard</p>
-                  <p class="font-body-sm text-body-sm text-on-surface-variant mt-1">10-free non-toxic formulas and 100% single-use essentials.</p>
+
+                <!-- Photo 2: standard2.png -->
+                <div class="group relative w-[40%] aspect-[3/3.6] overflow-hidden rounded-[4px] bg-primary-container/10 shadow-sm ring-1 ring-[#c5a059]/25">
+                  <img
+                    src="assets/images/about/standards/standard2.png"
+                    alt="Bespoke Pedicure &amp; Nail Craftsmanship at Brothers Nails &amp; Lashes"
+                    class="w-full h-full object-cover object-[42%_60%] transition-transform duration-700 ease-out group-hover:scale-105"
+                    loading="lazy"
+                  >
+                  <div class="absolute inset-0 bg-gradient-to-t from-[#001e19]/45 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
                 </div>
-                <div class="bg-surface-container-low p-5 rounded-2xl border border-secondary-fixed-dim/30">
-                  <span class="material-symbols-outlined text-secondary text-2xl mb-2">local_florist</span>
-                  <p class="font-title-md text-title-md text-primary">Desert Botanicals</p>
-                  <p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Organic herbal infusions, essential oils, and chilled refreshments.</p>
+              </div>
+
+              <!-- Row 2: Left-overhanging portrait + wider offset right frame -->
+              <div class="flex items-start gap-2.5 mt-2.5">
+                <!-- Photo 3: standard3.png -->
+                <div class="group relative w-[43%] aspect-[3/3.6] overflow-hidden rounded-[4px] bg-primary-container/10 shadow-sm ring-1 ring-[#c5a059]/25">
+                  <img
+                    src="assets/images/about/standards/standard3.png"
+                    alt="Clean &amp; Relaxing Luxury Spa Loungers at Brothers Nails &amp; Lashes"
+                    class="w-full h-full object-cover object-[55%_48%] transition-transform duration-700 ease-out group-hover:scale-105"
+                    loading="lazy"
+                  >
+                  <div class="absolute inset-0 bg-gradient-to-t from-[#001e19]/45 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
+                </div>
+
+                <!-- Photo 4: standard4.png -->
+                <div class="group relative w-[57%] aspect-[4/3.5] overflow-hidden rounded-[4px] bg-primary-container/10 shadow-sm ring-1 ring-[#c5a059]/25">
+                  <img
+                    src="assets/images/about/standards/standard4.png"
+                    alt="Unhurried Personal Consultation &amp; Guest Hospitality at Brothers Nails &amp; Lashes"
+                    class="w-full h-full object-cover object-[48%_56%] transition-transform duration-700 ease-out group-hover:scale-105"
+                    loading="lazy"
+                  >
+                  <div class="absolute inset-0 bg-gradient-to-t from-[#001e19]/45 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
                 </div>
               </div>
             </div>
           </div>
 
-          <!-- Brand Manifesto & Quote Card -->
-          <div class="bg-surface-container-low rounded-3xl p-8 md:p-12 border border-secondary/20 relative overflow-hidden">
-            <div class="absolute -right-12 -bottom-12 w-48 h-48 bg-secondary-fixed/15 rounded-full blur-2xl pointer-events-none"></div>
-            <div class="max-w-3xl mx-auto text-center space-y-6 relative z-10">
-              <span class="material-symbols-outlined text-secondary text-4xl">format_quote</span>
-              <blockquote class="font-headline-lg md:font-headline-lg font-serif italic text-primary leading-snug">
-                “We created this sanctuary so that self-care in the Coachella Valley is never treated as a chore, but celebrated as an unhurried art form.”
-              </blockquote>
-              <div class="pt-2">
-                <p class="font-title-md text-title-md text-primary font-semibold">The Founders of Brothers Nails &amp; Lashes</p>
-                <p class="font-label-sm text-label-sm text-secondary uppercase tracking-widest mt-1">La Quinta Sanctuary Atelier</p>
-              </div>
+          <!-- RIGHT COLUMN (6 cols): Continuous Vertical Gold Ledger (Cardless) -->
+          <div class="lg:col-span-6 lg:pt-2">
+            <div class="relative pl-8 sm:pl-11">
+              <!-- Continuous Vertical Gold Thread -->
+              <div aria-hidden="true" class="absolute left-[7px] top-3 bottom-6 w-[2px] bg-gradient-to-b from-[#c5a059] via-[#c5a059]/45 to-[#c5a059]/15"></div>
+
+              <!-- Standard 01 -->
+              <article class="group relative pb-10 md:pb-12 mb-10 md:mb-12 border-b border-[#c5a059]/30">
+                <span aria-hidden="true" class="absolute -left-8 sm:-left-11 top-1.5 w-4 h-4 rounded-full bg-[#c5a059] border-2 border-[#c5a059] ring-4 ring-[#f4efea] transition-transform duration-300 group-hover:scale-110"></span>
+                <div class="flex items-start gap-4 sm:gap-5">
+                  <span class="font-display-lg italic text-2xl sm:text-[26px] text-[#c5a059] font-normal leading-none w-8 sm:w-9 shrink-0 pt-0.5">
+                    01
+                  </span>
+                  <div class="flex-1 space-y-2.5">
+                    <div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
+                      <h3 class="font-headline-md text-2xl sm:text-[26px] text-primary font-medium tracking-tight leading-snug group-hover:text-secondary transition-colors duration-300">
+                        Spotless Hygiene
+                      </h3>
+                      <span class="font-label-sm text-[11px] tracking-[0.18em] uppercase text-[#c5a059] font-semibold">
+                        PURE SAFETY
+                      </span>
+                    </div>
+                    <p class="font-body-md text-[15px] sm:text-base text-on-surface-variant leading-relaxed max-w-2xl">
+                      Every chair, station, and metal instrument is thoroughly disinfected and sealed — kept spotless between every guest.
+                    </p>
+                  </div>
+                </div>
+              </article>
+
+              <!-- Standard 02 -->
+              <article class="group relative pb-10 md:pb-12 mb-10 md:mb-12 border-b border-[#c5a059]/30">
+                <span aria-hidden="true" class="absolute -left-8 sm:-left-11 top-1.5 w-4 h-4 rounded-full bg-[#f4efea] border-2 border-[#c5a059] ring-4 ring-[#f4efea] transition-all duration-300 group-hover:bg-[#c5a059] group-hover:scale-110"></span>
+                <div class="flex items-start gap-4 sm:gap-5">
+                  <span class="font-display-lg italic text-2xl sm:text-[26px] text-[#c5a059] font-normal leading-none w-8 sm:w-9 shrink-0 pt-0.5">
+                    02
+                  </span>
+                  <div class="flex-1 space-y-2.5">
+                    <div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
+                      <h3 class="font-headline-md text-2xl sm:text-[26px] text-primary font-medium tracking-tight leading-snug group-hover:text-secondary transition-colors duration-300">
+                        Non-Toxic Care
+                      </h3>
+                      <span class="font-label-sm text-[11px] tracking-[0.18em] uppercase text-[#c5a059] font-semibold">
+                        GENTLE &amp; SAFE
+                      </span>
+                    </div>
+                    <p class="font-body-md text-[15px] sm:text-base text-on-surface-variant leading-relaxed max-w-2xl">
+                      Free from harsh toxins and strong fumes, our clean polishes and adhesives keep your natural nails thriving.
+                    </p>
+                  </div>
+                </div>
+              </article>
+
+              <!-- Standard 03 -->
+              <article class="group relative pb-10 md:pb-12 mb-10 md:mb-12 border-b border-[#c5a059]/30">
+                <span aria-hidden="true" class="absolute -left-8 sm:-left-11 top-1.5 w-4 h-4 rounded-full bg-[#f4efea] border-2 border-[#c5a059] ring-4 ring-[#f4efea] transition-all duration-300 group-hover:bg-[#c5a059] group-hover:scale-110"></span>
+                <div class="flex items-start gap-4 sm:gap-5">
+                  <span class="font-display-lg italic text-2xl sm:text-[26px] text-[#c5a059] font-normal leading-none w-8 sm:w-9 shrink-0 pt-0.5">
+                    03
+                  </span>
+                  <div class="flex-1 space-y-2.5">
+                    <div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
+                      <h3 class="font-headline-md text-2xl sm:text-[26px] text-primary font-medium tracking-tight leading-snug group-hover:text-secondary transition-colors duration-300">
+                        Always Listening
+                      </h3>
+                      <span class="font-label-sm text-[11px] tracking-[0.18em] uppercase text-[#c5a059] font-semibold">
+                        CUSTOM FIT
+                      </span>
+                    </div>
+                    <p class="font-body-md text-[15px] sm:text-base text-on-surface-variant leading-relaxed max-w-2xl">
+                      We listen closely to your vision first—tailoring every shape, shade, and detail around your personal style.
+                    </p>
+                  </div>
+                </div>
+              </article>
+
+              <!-- Standard 04 -->
+              <article class="group relative">
+                <span aria-hidden="true" class="absolute -left-8 sm:-left-11 top-1.5 w-4 h-4 rounded-full bg-[#f4efea] border-2 border-[#c5a059] ring-4 ring-[#f4efea] transition-all duration-300 group-hover:bg-[#c5a059] group-hover:scale-110"></span>
+                <div class="flex items-start gap-4 sm:gap-5">
+                  <span class="font-display-lg italic text-2xl sm:text-[26px] text-[#c5a059] font-normal leading-none w-8 sm:w-9 shrink-0 pt-0.5">
+                    04
+                  </span>
+                  <div class="flex-1 space-y-2.5">
+                    <div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
+                      <h3 class="font-headline-md text-2xl sm:text-[26px] text-primary font-medium tracking-tight leading-snug group-hover:text-secondary transition-colors duration-300">
+                        Lasting Quality
+                      </h3>
+                      <span class="font-label-sm text-[11px] tracking-[0.18em] uppercase text-[#c5a059] font-semibold">
+                        BUILT TO LAST
+                      </span>
+                    </div>
+                    <p class="font-body-md text-[15px] sm:text-base text-on-surface-variant leading-relaxed max-w-2xl">
+                      Skilled artistry, durable finishes, and attentive service held to a higher standard — so your set stays for weeks.
+                    </p>
+                  </div>
+                </div>
+              </article>
+
             </div>
           </div>
+
         </div>
       </div>
     </section>
 
     <!-- ========================================================================= -->
-    <!-- 7. INVITATION CTA SECTION                                                 -->
+    <!-- 4. INVITATION CTA SECTION (Full-Bleed Polish Wall Backdrop + Fade Veil)   -->
     <!-- ========================================================================= -->
-    <section class="py-24 bg-primary-container text-surface relative overflow-hidden" id="book">
-      <!-- Ambient Golden Glow -->
-      <div class="absolute -top-24 -right-24 w-96 h-96 bg-secondary-fixed/15 rounded-full blur-3xl pointer-events-none"></div>
-      <div class="absolute -bottom-24 -left-24 w-96 h-96 bg-secondary/20 rounded-full blur-3xl pointer-events-none"></div>
-      <div class="max-w-4xl mx-auto px-6 text-center space-y-8 relative z-10">
-        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-surface/10 border border-secondary-fixed/30 text-secondary-fixed font-label-sm text-label-sm">
-          <span class="material-symbols-outlined text-sm">event_available</span>
-          <span class="tracking-widest uppercase">Reserve Your Appointment</span>
-        </div>
-        <h2 class="font-display-lg text-display-lg font-serif text-secondary-fixed tracking-tight">
-          Experience the Sanctuary
-        </h2>
-        <p class="font-body-lg text-body-lg text-surface/85 max-w-xl mx-auto leading-relaxed">
-          Step away from the ordinary and immerse yourself in California desert luxury. Private lash consultations and signature manicures fill quickly.
-        </p>
-        <!-- CTA Buttons -->
-        <div class="flex flex-col sm:flex-row items-center justify-center gap-5 pt-4">
-          <a class="w-full sm:w-auto px-9 py-4 rounded-full bg-secondary-fixed text-on-secondary-fixed hover:bg-secondary-fixed-dim font-label-lg text-label-lg tracking-wider font-semibold shadow-lg transition-all duration-200 active:scale-[0.98]" href="#book" data-booking>
-            Book Your Visit
-          </a>
-          <a class="w-full sm:w-auto px-9 py-4 rounded-full bg-transparent text-secondary-fixed border border-secondary-fixed/50 hover:bg-surface/10 font-label-lg text-label-lg tracking-wider transition-all duration-200 active:scale-[0.98]" href="services.html">
-            Explore Our Services
-          </a>
-        </div>
-        <!-- Salon Info Card Pill -->
-        <div class="pt-8 border-t border-secondary-fixed/20 max-w-3xl mx-auto flex flex-col md:flex-row items-center justify-between text-surface/80 font-body-sm text-body-sm gap-4">
-          <div class="flex items-center gap-2">
-            <span class="material-symbols-outlined text-secondary-fixed text-lg">location_on</span>
-            <span>78982 CA-111, Suite 1B, La Quinta, CA 92253</span>
+    <section class="bg-surface py-16 md:py-24 px-4 sm:px-6 md:px-12 overflow-x-clip" id="book">
+      <div class="max-w-7xl mx-auto">
+        <!-- Main Rounded Dark Emerald Card with Full Background Image Revealed Left -> Right -->
+        <div class="relative rounded-[28px] md:rounded-[36px] overflow-hidden bg-[#021a15] border border-[#ffe088]/25 shadow-[0_30px_70px_-20px_rgba(0,30,25,0.4)] min-h-[320px] sm:min-h-[360px] lg:min-h-[390px] xl:min-h-[415px] flex items-center">
+          <!-- Full Banner Background Image -->
+          <img
+            src="assets/images/about/cta/cta.png"
+            alt="Brothers Nails &amp; Lashes Luxury Nail Polish Collection Wall"
+            class="absolute inset-0 w-full h-full object-cover object-right md:object-center"
+            loading="lazy"
+          >
+
+          <!-- Left-to-Right Emerald Veil: Rich Deep Emerald on Left (Readable Text) -> Transparent on Right (Crisp Image) -->
+          <div
+            aria-hidden="true"
+            class="hidden lg:block absolute inset-0 pointer-events-none"
+            style="background: linear-gradient(90deg, rgba(2, 26, 21, 0.97) 0%, rgba(4, 34, 28, 0.90) 36%, rgba(8, 52, 45, 0.48) 60%, rgba(8, 52, 45, 0.12) 84%, rgba(0, 26, 21, 0.02) 100%);"
+          ></div>
+          <!-- Mobile / Tablet Veil for Clear Readability -->
+          <div
+            aria-hidden="true"
+            class="lg:hidden absolute inset-0 pointer-events-none"
+            style="background: linear-gradient(90deg, rgba(2, 26, 21, 0.95) 0%, rgba(4, 34, 28, 0.82) 55%, rgba(8, 52, 45, 0.42) 100%);"
+          ></div>
+          <!-- Subtle Edge Polish -->
+          <div aria-hidden="true" class="absolute inset-0 rounded-[28px] md:rounded-[36px] shadow-[inset_0_0_40px_rgba(0,20,16,0.3)] pointer-events-none"></div>
+
+          <!-- Left Content Block -->
+          <div class="relative z-10 w-full lg:w-7/12 xl:w-6/12 px-7 sm:px-12 lg:pl-14 xl:pl-16 lg:pr-8 py-12 sm:py-16 space-y-6 text-left">
+            <div class="space-y-4">
+              <h2 class="font-haggia text-3xl sm:text-4xl xl:text-[46px] font-normal text-[#f4efea] leading-snug tracking-tight drop-shadow-md">
+                Ready to Experience
+                <span class="block mt-2.5">the <span class="italic text-[#ffe088]">BROTHERS</span> ?</span>
+              </h2>
+            </div>
+
+            <!-- Crisp Primary Pill CTA + Secondary Services Link -->
+            <div class="pt-1 flex flex-wrap items-center gap-4">
+              <a
+                class="hero-cta-primary gold-shimmer text-primary font-montserrat text-xs sm:text-[13px] pl-6 pr-2 py-2 rounded-[9999px] shadow-md inline-flex items-center gap-3 group"
+                href="https://book.gocheckin.net/v3/nails/brothers-nails-and-lashes-20136/choose-service"
+                data-booking
+              >
+                <span class="font-bold tracking-wider">TREAT YOURSELF</span>
+                <span class="w-[30px] h-[30px] rounded-[9999px] bg-primary text-secondary-fixed flex items-center justify-center transition-transform duration-300 group-hover:translate-x-0.5">
+                  <span class="material-symbols-outlined text-[15px]">arrow_forward</span>
+                </span>
+              </a>
+              <a
+                class="group text-xs font-montserrat font-semibold uppercase tracking-widest text-[#f4efea] hover:text-[#ffe088] transition-colors duration-200 inline-flex items-center gap-1.5 px-3 py-2"
+                href="services.html"
+              >
+                <span>Explore Services</span>
+                <span class="material-symbols-outlined text-sm transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5">north_east</span>
+              </a>
+            </div>
           </div>
-          <div class="flex items-center gap-2">
-            <span class="material-symbols-outlined text-secondary-fixed text-lg">schedule</span>
-            <span>Mon–Fri 9am–7pm • Sat 9am–6pm • Sun 10am–5pm</span>
-          </div>
-          <a href="tel:7603000112" class="flex items-center gap-2 hover:text-secondary-fixed transition-colors">
-            <span class="material-symbols-outlined text-secondary-fixed text-lg">call</span>
-            <span>(760) 300-0112</span>
-          </a>
         </div>
       </div>
     </section>
   </main>
 
   <!-- ========================================================================= -->
-  <!-- 8. FOOTER (Shared Component)                                              -->
+  <!-- 8. FOOTER (Shared Component: Footer)                                      -->
   <!-- ========================================================================= -->
   <footer class="w-full border-t border-secondary-fixed/30 bg-primary-container text-surface-container-high transition-colors duration-200 relative overflow-hidden">
     <div class="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 h-[1px] bg-gradient-to-r from-transparent via-secondary-fixed/40 to-transparent pointer-events-none"></div>
@@ -348,24 +498,29 @@
         <!-- Brand Column (6 cols) -->
         <div class="lg:col-span-6 space-y-5">
           <a aria-label="Brothers Nails &amp; Lashes" class="inline-block group focus:outline-none" href="index.html">
-            <img alt="Brothers Nails &amp; Lashes" class="h-12 md:h-14 w-auto object-contain brightness-110 drop-shadow transition-transform duration-300 group-hover:scale-105" src="assets/images/brand/horizontal-logo-transparent.png">
+            <img alt="Brothers Nails &amp; Lashes" class="h-12 md:h-20 w-auto object-contain brightness-110 drop-shadow transition-transform duration-300 group-hover:scale-105" src="assets/images/brand/horizontal-logo-transparent.png">
           </a>
           <p class="font-body-md text-surface-container-high/90 max-w-md leading-relaxed">
-            La Quinta's Premier Bespoke Nail &amp; Lash Sanctuary. Merging classical European nail precision with signature lash artistry in an atmosphere of tranquil desert luxury.
+            A place for fresh nails, lovely lashes, and your next favorite look. At BROTHERS Nails & Lashes, we make every detail count, so you can leave feeling beautiful and confident
           </p>
-          <div class="text-xs text-secondary-fixed/90 space-y-1">
-            <p>78982 CA-111, Suite 1B, La Quinta, CA 92253 • <a href="tel:7603000112" class="underline hover:text-white">(760) 300-0112</a></p>
-            <p>Mon–Fri: 9am–7pm • Sat: 9am–6pm • Sun: 10am–5pm</p>
-          </div>
           <div class="flex items-center gap-3 pt-1">
-            <a aria-label="Instagram @brothersnailslashes" class="w-10 h-10 rounded-full bg-primary/60 border border-secondary-fixed/30 flex items-center justify-center text-secondary-fixed hover:bg-secondary-fixed hover:text-primary hover:shadow-lg transition-all duration-300" href="https://www.instagram.com/brothersnailslashes" target="_blank" rel="noopener noreferrer">
-              <span class="material-symbols-outlined text-lg" data-icon="photo_camera">photo_camera</span>
-            </a>
-            <a aria-label="Google Maps" class="w-10 h-10 rounded-full bg-primary/60 border border-secondary-fixed/30 flex items-center justify-center text-secondary-fixed hover:bg-secondary-fixed hover:text-primary hover:shadow-lg transition-all duration-300" href="https://www.google.com/maps/search/?api=1&amp;query=78982+CA-111+Suite+1B+La+Quinta+CA+92253" target="_blank" rel="noopener noreferrer">
+            <a aria-label="Google Maps" title="Google Maps" class="w-10 h-10 rounded-full bg-primary/60 border border-secondary-fixed/30 flex items-center justify-center text-secondary-fixed hover:bg-secondary-fixed hover:text-primary hover:shadow-lg transition-all duration-300" href="https://www.google.com/maps/search/?api=1&amp;query=78982+CA-111+Suite+1B+La+Quinta+CA+92253" target="_blank" rel="noopener noreferrer">
               <span class="material-symbols-outlined text-lg" data-icon="location_on">location_on</span>
             </a>
-            <a aria-label="Call Brothers Nails &amp; Lashes" class="w-10 h-10 rounded-full bg-primary/60 border border-secondary-fixed/30 flex items-center justify-center text-secondary-fixed hover:bg-secondary-fixed hover:text-primary hover:shadow-lg transition-all duration-300" href="tel:7603000112">
+            <a aria-label="Call Brothers Nails &amp; Lashes" title="Call (760) 300-0112" class="w-10 h-10 rounded-full bg-primary/60 border border-secondary-fixed/30 flex items-center justify-center text-secondary-fixed hover:bg-secondary-fixed hover:text-primary hover:shadow-lg transition-all duration-300" href="tel:7603000112">
               <span class="material-symbols-outlined text-lg" data-icon="call">call</span>
+            </a>
+            <a aria-label="Instagram @brothersnailslashes" title="Instagram @brothersnailslashes" class="w-10 h-10 rounded-full bg-primary/60 border border-secondary-fixed/30 flex items-center justify-center text-secondary-fixed hover:bg-secondary-fixed hover:text-primary hover:shadow-lg transition-all duration-300" href="https://www.instagram.com/brothersnailslashes" target="_blank" rel="noopener noreferrer">
+              <svg class="w-[18px] h-[18px]" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true">
+                <rect width="20" height="20" x="2" y="2" rx="5" ry="5"/>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/>
+              </svg>
+            </a>
+            <a aria-label="Facebook Brothers Nails &amp; Lashes" title="Facebook" class="w-10 h-10 rounded-full bg-primary/60 border border-secondary-fixed/30 flex items-center justify-center text-secondary-fixed hover:bg-secondary-fixed hover:text-primary hover:shadow-lg transition-all duration-300" href="https://www.facebook.com/brothersnailslashes" target="_blank" rel="noopener noreferrer">
+              <svg class="w-[18px] h-[18px]" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"/>
+              </svg>
             </a>
           </div>
         </div>
@@ -384,7 +539,7 @@
         <div class="lg:col-span-3 space-y-4">
           <p class="font-label-lg font-semibold tracking-widest text-secondary-fixed uppercase text-xs">Help</p>
           <ul class="space-y-2.5 font-body-sm text-surface-container-high/85">
-            <li><a class="hover:text-secondary-fixed transition-colors duration-200 inline-flex items-center gap-1.5" href="#book" data-booking>Book Online</a></li>
+            <li><a class="hover:text-secondary-fixed transition-colors duration-200 inline-flex items-center gap-1.5" href="#booking" data-booking>Book Online</a></li>
             <li><a class="hover:text-secondary-fixed transition-colors duration-200 inline-flex items-center gap-1.5" href="#faq">FAQ's</a></li>
             <li><a class="hover:text-secondary-fixed transition-colors duration-200 inline-flex items-center gap-1.5" href="#policy">Salon Policy</a></li>
           </ul>
@@ -392,12 +547,7 @@
       </div>
       <!-- Bottom Bar & Legal Links -->
       <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 font-body-sm text-xs text-on-primary-container">
-        <p>© 2026 Brothers Nails &amp; Lashes. All rights reserved. 78982 CA-111, Suite 1B, La Quinta, CA 92253.</p>
-        <div class="flex items-center space-x-6">
-          <a class="hover:text-secondary-fixed transition-colors duration-200" href="#privacy">Privacy Policy</a>
-          <a class="hover:text-secondary-fixed transition-colors duration-200" href="#terms">Terms of Service</a>
-          <a class="hover:text-secondary-fixed transition-colors duration-200" href="#accessibility">Accessibility</a>
-        </div>
+        <p>© 2026 BROTHERS Nails &amp; Lashes. All rights reserved</p>
       </div>
     </div>
   </footer>

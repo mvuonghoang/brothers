@@ -96,7 +96,8 @@
             "headline-md": ["Playfair Display", "serif"],
             "label-sm": ["Kanit", "Plus Jakarta Sans", "sans-serif"],
             "title-lg": ["Playfair Display", "serif"],
-            "title-md": ["Plus Jakarta Sans", "sans-serif"]
+            "title-md": ["Plus Jakarta Sans", "sans-serif"],
+            "haggia": ["Haggia", "Playfair Display", "serif"]
           },
           "fontSize": {
             "headline-lg-mobile": ["26px", {"lineHeight": "34px", "fontWeight": "500"}],
@@ -119,41 +120,48 @@
   <link rel="stylesheet" href="assets/css/custom.css">
 </head>
 <body class="bg-background text-on-surface antialiased selection:bg-secondary-fixed selection:text-primary">
-  <!-- ==================== TOP NAVIGATION BAR ==================== -->
-  <header class="docked full-width top-0 sticky z-50 bg-surface/95 dark:bg-primary/95 backdrop-blur-md border-b border-outline-variant/30 dark:border-primary-container shadow-sm dark:shadow-none transition-all duration-200">
-    <div class="max-w-7xl mx-auto px-6 md:px-12 flex justify-between items-center h-20">
-      <!-- Brand Logo Left -->
-      <a aria-label="Brothers Nails &amp; Lashes Home" class="flex items-center gap-3 group focus:outline-none" href="index.html">
-        <img alt="Brothers Nails &amp; Lashes" class="h-10 md:h-12 w-auto object-contain brand-logo-header transition-transform duration-300 group-hover:scale-105" src="assets/images/brand/horizontal-logo-transparent.png">
-      </a>
-      <!-- Desktop Navigation Links (Active: Gallery) -->
-      <nav class="hidden md:flex items-center space-x-8 font-label-lg text-label-lg tracking-wider">
-        <a class="text-on-surface-variant dark:text-surface-dim hover:text-secondary dark:hover:text-secondary-fixed transition-colors duration-200" href="index.html">Home</a>
-        <a class="text-on-surface-variant dark:text-surface-dim hover:text-secondary dark:hover:text-secondary-fixed transition-colors duration-200" href="about.html">About</a>
-        <a class="text-on-surface-variant dark:text-surface-dim hover:text-secondary dark:hover:text-secondary-fixed transition-colors duration-200" href="services.html">Services</a>
-        <a class="text-secondary dark:text-secondary-fixed font-semibold border-b-2 border-secondary dark:border-secondary-fixed pb-1 transition-colors duration-200" href="gallery.html">Gallery</a>
-        <a class="text-on-surface-variant dark:text-surface-dim hover:text-secondary dark:hover:text-secondary-fixed transition-colors duration-200" href="contact.html">Contact</a>
-      </nav>
-      <!-- Trailing Action: Book Now -->
-      <div class="flex items-center gap-4">
-        <a class="gold-shimmer text-primary font-title-md text-title-md px-6 py-2.5 rounded-lg shadow-sm hover:shadow-md transition-all duration-300 transform hover:-translate-y-0.5 active:scale-[0.98] border border-secondary-fixed-dim/40 flex items-center gap-2 group" href="#booking-cta" data-booking>
-          <span class="font-semibold tracking-wide">Book Now</span>
-          <span class="material-symbols-outlined text-base transition-transform group-hover:translate-x-1" data-icon="calendar_month">calendar_month</span>
+  <!-- ========================================================================= -->
+  <!-- 1. HEADER / NAVIGATION BAR (Floating Capsule Navbar)                      -->
+  <!-- ========================================================================= -->
+  <header id="mainNavbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+    <div id="mainNavbarBand" class="bg-transparent transition-all duration-300">
+      <div class="max-w-7xl mx-auto px-6 md:px-12 flex justify-between items-center h-20">
+        <!-- Brand Logo Left -->
+        <a aria-label="Brothers Nails &amp; Lashes Home" class="flex items-center gap-3 group focus:outline-none" href="index.html">
+          <img alt="Brothers Nails &amp; Lashes" class="h-12 md:h-16 lg:h-[68px] w-auto object-contain brightness-110 drop-shadow-[0_2px_8px_rgba(0,18,15,0.5)] transition-transform duration-300 group-hover:scale-105" src="assets/images/brand/horizontal-logo-transparent.png">
         </a>
-        <!-- Mobile Menu Toggle Button -->
-        <button aria-label="Toggle Navigation Menu" class="md:hidden p-2 text-primary dark:text-primary-fixed focus:outline-none" id="mobileMenuBtn">
-          <span class="material-symbols-outlined text-2xl" data-icon="menu">menu</span>
-        </button>
+        <!-- Centered Pill Capsule Nav Links (Active: Gallery) -->
+        <nav id="desktopNavCapsule" class="hidden md:flex items-center gap-1 bg-[#2b5e53]/65 backdrop-blur-md border border-white/15 px-2 py-1.5 rounded-[9999px] shadow-[0_8px_28px_rgba(0,18,15,0.35)] font-label-lg text-[13px] font-normal tracking-wider">
+          <a class="nav-pill-tab px-5 py-2 rounded-[9999px] text-[#ffe088] hover:text-[#f5c84c] hover:bg-primary/40 font-normal transition-all duration-200 transform hover:-translate-y-0.5 hover:scale-105" href="index.html">Home</a>
+          <a class="nav-pill-tab px-5 py-2 rounded-[9999px] text-[#ffe088] hover:text-[#f5c84c] hover:bg-primary/40 font-normal transition-all duration-200 transform hover:-translate-y-0.5 hover:scale-105" href="about.html">About</a>
+          <a class="nav-pill-tab px-5 py-2 rounded-[9999px] text-[#ffe088] hover:text-[#f5c84c] hover:bg-primary/40 font-normal transition-all duration-200 transform hover:-translate-y-0.5 hover:scale-105" href="services.html">Services</a>
+          <a class="nav-pill-tab px-5 py-2 rounded-[9999px] bg-primary text-[#f5c84c] font-normal shadow-md transition-all duration-200 transform hover:-translate-y-0.5 hover:scale-105" href="gallery.html">Gallery</a>
+          <a class="nav-pill-tab px-5 py-2 rounded-[9999px] text-[#ffe088] hover:text-[#f5c84c] hover:bg-primary/40 font-normal transition-all duration-200 transform hover:-translate-y-0.5 hover:scale-105" href="contact.html">Contact</a>
+        </nav>
+        <!-- Right Action CTA (Pill with Circular Arrow Badge, no search icon) -->
+        <div class="flex items-center gap-4">
+          <a class="hero-cta-primary gold-shimmer text-primary font-montserrat text-xs pl-[18px] pr-1.5 py-1.5 rounded-[9999px] shadow-md flex items-center gap-2.5 group" href="https://book.gocheckin.net/v3/nails/brothers-nails-and-lashes-20136/choose-service" target="_blank" rel="noopener noreferrer">
+            <span class="font-bold tracking-wider">BOOK NOW</span>
+            <span class="w-[26px] h-[26px] rounded-[9999px] bg-primary text-secondary-fixed flex items-center justify-center transition-transform duration-300 group-hover:translate-x-0.5">
+              <span class="material-symbols-outlined text-[13px]">arrow_forward</span>
+            </span>
+          </a>
+          <!-- Mobile Menu Toggle Button -->
+          <button aria-label="Toggle Navigation Menu" class="md:hidden p-2 text-secondary-fixed focus:outline-none" id="mobileMenuBtn">
+            <span class="material-symbols-outlined text-2xl" data-icon="menu">menu</span>
+          </button>
+        </div>
       </div>
     </div>
+
     <!-- Mobile Navigation Drawer -->
-    <div class="hidden md:hidden bg-surface-container-lowest border-b border-outline-variant/30 px-6 py-6 transition-all" id="mobileMenu">
-      <div class="flex flex-col space-y-4 font-label-lg text-label-lg">
-        <a class="text-on-surface-variant hover:text-primary py-1" href="index.html">Home</a>
-        <a class="text-on-surface-variant hover:text-primary py-1" href="about.html">About</a>
-        <a class="text-on-surface-variant hover:text-primary py-1" href="services.html">Services</a>
-        <a class="text-secondary font-semibold py-1" href="gallery.html">Gallery</a>
-        <a class="text-on-surface-variant hover:text-primary py-1" href="contact.html">Contact</a>
+    <div class="hidden md:hidden bg-primary-container/95 backdrop-blur-md shadow-[0_12px_32px_rgba(0,18,15,0.5)] px-6 py-6 transition-all" id="mobileMenu">
+      <div class="flex flex-col space-y-4 font-label-lg text-[13px] font-normal">
+        <a class="text-[#ffe088] hover:text-[#d4a024] font-normal py-1" href="index.html">Home</a>
+        <a class="text-[#ffe088] hover:text-[#d4a024] font-normal py-1" href="about.html">About</a>
+        <a class="text-[#ffe088] hover:text-[#d4a024] font-normal py-1" href="services.html">Services</a>
+        <a class="text-[#d4a024] font-normal py-1" href="gallery.html">Gallery</a>
+        <a class="text-[#ffe088] hover:text-[#d4a024] font-normal py-1" href="contact.html">Contact</a>
       </div>
     </div>
   </header>
@@ -162,8 +170,8 @@
   <section class="relative pt-16 pb-12 overflow-hidden bg-surface-container-low border-b border-outline-variant/30">
     <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(212,175,55,0.08),transparent_60%)] pointer-events-none"></div>
     <div class="max-w-7xl mx-auto px-6 md:px-12 relative z-10 text-center">
-      <h1 class="font-display-lg text-display-lg md:text-5xl text-primary font-medium tracking-tight max-w-4xl mx-auto mb-5">
-        Our Craft <span class="italic font-normal font-display-lg text-secondary">&amp; Creations</span>
+      <h1 class="font-haggia text-display-lg md:text-5xl text-primary font-normal tracking-tight max-w-4xl mx-auto mb-5">
+        Our Craft <span class="italic font-normal text-secondary">&amp; Creations</span>
       </h1>
       <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto mb-10 leading-relaxed">
         Explore bespoke nails, lashes, and spa rituals in La Quinta. Click any work to inspect or book the style.
@@ -187,7 +195,7 @@
         <div class="flex items-center justify-between w-full">
           <div>
             <span class="font-label-sm text-label-sm tracking-widest text-secondary font-semibold uppercase">Curated Highlights</span>
-            <h2 class="font-headline-lg text-headline-lg text-primary mt-1">Signature Works</h2>
+            <h2 class="font-haggia text-headline-lg font-normal text-primary mt-1">Signature Works</h2>
           </div>
         </div>
       </div>
@@ -276,7 +284,7 @@
     <div class="max-w-7xl mx-auto px-6 md:px-12">
       <!-- Header -->
       <div class="text-center max-w-3xl mx-auto mb-16">
-        <h2 class="font-display-lg text-display-lg text-primary mb-2">Studio Portfolio</h2>
+        <h2 class="font-haggia text-display-lg font-normal text-primary mb-2">Studio Portfolio</h2>
         <p class="font-body-md text-body-md text-on-surface-variant">Hand-crafted nail sets, volume lashes, and restorative rituals.</p>
       </div>
       <!-- Bento-Inspired Gallery Cards Grid (8 Cards) -->
@@ -420,7 +428,7 @@
       <!-- Section Title & Handle Button -->
       <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
         <div>
-          <h2 class="font-headline-lg text-headline-lg text-primary">Client Moments</h2>
+          <h2 class="font-haggia text-headline-lg font-normal text-primary">Client Moments</h2>
           <p class="font-body-md text-body-md text-secondary mt-1 font-semibold">@brothersnailslashes • #BrothersNailsLaQuinta</p>
         </div>
         <div class="mt-4 md:mt-0 flex items-center gap-4">
@@ -468,7 +476,7 @@
       <div class="inline-flex p-3 rounded-full bg-surface/10 border border-secondary-fixed/30 text-secondary-fixed mb-6">
         <span class="material-symbols-outlined text-2xl">auto_awesome</span>
       </div>
-      <h2 class="font-display-lg text-display-lg md:text-5xl text-surface-bright font-medium tracking-tight mb-6">
+      <h2 class="font-haggia text-display-lg md:text-5xl text-surface-bright font-normal tracking-tight mb-6">
         Ready for Your Transformation?
       </h2>
       <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -489,7 +497,9 @@
     </div>
   </section>
 
-  <!-- ==================== 6. FOOTER ==================== -->
+  <!-- ========================================================================= -->
+  <!-- 7. FOOTER (Shared Component: Footer)                                      -->
+  <!-- ========================================================================= -->
   <footer class="w-full border-t border-secondary-fixed/30 bg-primary-container text-surface-container-high transition-colors duration-200 relative overflow-hidden">
     <div class="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 h-[1px] bg-gradient-to-r from-transparent via-secondary-fixed/40 to-transparent pointer-events-none"></div>
     <div class="absolute -top-32 right-12 w-96 h-96 bg-secondary-fixed/10 rounded-full blur-3xl pointer-events-none"></div>
@@ -498,24 +508,29 @@
         <!-- Brand Column (6 cols) -->
         <div class="lg:col-span-6 space-y-5">
           <a aria-label="Brothers Nails &amp; Lashes" class="inline-block group focus:outline-none" href="index.html">
-            <img alt="Brothers Nails &amp; Lashes" class="h-12 md:h-14 w-auto object-contain brightness-110 drop-shadow transition-transform duration-300 group-hover:scale-105" src="assets/images/brand/horizontal-logo-transparent.png">
+            <img alt="Brothers Nails &amp; Lashes" class="h-12 md:h-20 w-auto object-contain brightness-110 drop-shadow transition-transform duration-300 group-hover:scale-105" src="assets/images/brand/horizontal-logo-transparent.png">
           </a>
           <p class="font-body-md text-surface-container-high/90 max-w-md leading-relaxed">
-            La Quinta's Premier Bespoke Nail &amp; Lash Sanctuary. Merging classical European nail precision with signature lash artistry in an atmosphere of tranquil desert luxury.
+            A place for fresh nails, lovely lashes, and your next favorite look. At BROTHERS Nails & Lashes, we make every detail count, so you can leave feeling beautiful and confident
           </p>
-          <div class="text-xs text-secondary-fixed/90 space-y-1">
-            <p>78982 CA-111, Suite 1B, La Quinta, CA 92253 • <a href="tel:7603000112" class="underline hover:text-white">(760) 300-0112</a></p>
-            <p>Mon–Fri: 9am–7pm • Sat: 9am–6pm • Sun: 10am–5pm</p>
-          </div>
           <div class="flex items-center gap-3 pt-1">
-            <a aria-label="Instagram @brothersnailslashes" class="w-10 h-10 rounded-full bg-primary/60 border border-secondary-fixed/30 flex items-center justify-center text-secondary-fixed hover:bg-secondary-fixed hover:text-primary hover:shadow-lg transition-all duration-300" href="https://www.instagram.com/brothersnailslashes" target="_blank" rel="noopener noreferrer">
-              <span class="material-symbols-outlined text-lg" data-icon="photo_camera">photo_camera</span>
-            </a>
-            <a aria-label="Google Maps" class="w-10 h-10 rounded-full bg-primary/60 border border-secondary-fixed/30 flex items-center justify-center text-secondary-fixed hover:bg-secondary-fixed hover:text-primary hover:shadow-lg transition-all duration-300" href="https://www.google.com/maps/search/?api=1&amp;query=78982+CA-111+Suite+1B+La+Quinta+CA+92253" target="_blank" rel="noopener noreferrer">
+            <a aria-label="Google Maps" title="Google Maps" class="w-10 h-10 rounded-full bg-primary/60 border border-secondary-fixed/30 flex items-center justify-center text-secondary-fixed hover:bg-secondary-fixed hover:text-primary hover:shadow-lg transition-all duration-300" href="https://www.google.com/maps/search/?api=1&amp;query=78982+CA-111+Suite+1B+La+Quinta+CA+92253" target="_blank" rel="noopener noreferrer">
               <span class="material-symbols-outlined text-lg" data-icon="location_on">location_on</span>
             </a>
-            <a aria-label="Call Brothers Nails &amp; Lashes" class="w-10 h-10 rounded-full bg-primary/60 border border-secondary-fixed/30 flex items-center justify-center text-secondary-fixed hover:bg-secondary-fixed hover:text-primary hover:shadow-lg transition-all duration-300" href="tel:7603000112">
+            <a aria-label="Call Brothers Nails &amp; Lashes" title="Call (760) 300-0112" class="w-10 h-10 rounded-full bg-primary/60 border border-secondary-fixed/30 flex items-center justify-center text-secondary-fixed hover:bg-secondary-fixed hover:text-primary hover:shadow-lg transition-all duration-300" href="tel:7603000112">
               <span class="material-symbols-outlined text-lg" data-icon="call">call</span>
+            </a>
+            <a aria-label="Instagram @brothersnailslashes" title="Instagram @brothersnailslashes" class="w-10 h-10 rounded-full bg-primary/60 border border-secondary-fixed/30 flex items-center justify-center text-secondary-fixed hover:bg-secondary-fixed hover:text-primary hover:shadow-lg transition-all duration-300" href="https://www.instagram.com/brothersnailslashes" target="_blank" rel="noopener noreferrer">
+              <svg class="w-[18px] h-[18px]" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true">
+                <rect width="20" height="20" x="2" y="2" rx="5" ry="5"/>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/>
+              </svg>
+            </a>
+            <a aria-label="Facebook Brothers Nails &amp; Lashes" title="Facebook" class="w-10 h-10 rounded-full bg-primary/60 border border-secondary-fixed/30 flex items-center justify-center text-secondary-fixed hover:bg-secondary-fixed hover:text-primary hover:shadow-lg transition-all duration-300" href="https://www.facebook.com/brothersnailslashes" target="_blank" rel="noopener noreferrer">
+              <svg class="w-[18px] h-[18px]" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"/>
+              </svg>
             </a>
           </div>
         </div>
@@ -534,7 +549,7 @@
         <div class="lg:col-span-3 space-y-4">
           <p class="font-label-lg font-semibold tracking-widest text-secondary-fixed uppercase text-xs">Help</p>
           <ul class="space-y-2.5 font-body-sm text-surface-container-high/85">
-            <li><a class="hover:text-secondary-fixed transition-colors duration-200 inline-flex items-center gap-1.5" href="#booking-cta" data-booking>Book Online</a></li>
+            <li><a class="hover:text-secondary-fixed transition-colors duration-200 inline-flex items-center gap-1.5" href="#booking" data-booking>Book Online</a></li>
             <li><a class="hover:text-secondary-fixed transition-colors duration-200 inline-flex items-center gap-1.5" href="#faq">FAQ's</a></li>
             <li><a class="hover:text-secondary-fixed transition-colors duration-200 inline-flex items-center gap-1.5" href="#policy">Salon Policy</a></li>
           </ul>
@@ -542,12 +557,7 @@
       </div>
       <!-- Bottom Bar & Legal Links -->
       <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 font-body-sm text-xs text-on-primary-container">
-        <p>© 2026 Brothers Nails &amp; Lashes. All rights reserved. 78982 CA-111, Suite 1B, La Quinta, CA 92253.</p>
-        <div class="flex items-center space-x-6">
-          <a class="hover:text-secondary-fixed transition-colors duration-200" href="#privacy">Privacy Policy</a>
-          <a class="hover:text-secondary-fixed transition-colors duration-200" href="#terms">Terms of Service</a>
-          <a class="hover:text-secondary-fixed transition-colors duration-200" href="#accessibility">Accessibility</a>
-        </div>
+        <p>© 2026 BROTHERS Nails &amp; Lashes. All rights reserved</p>
       </div>
     </div>
   </footer>

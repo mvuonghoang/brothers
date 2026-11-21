@@ -40,8 +40,28 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: 'TRT Bright Guard';
+  src: url('../fonts/TRTBrightGuardDemo-Regular-BF6ad6e799b4fbe.ttf') format('truetype');
+  font-weight: 400 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'TRT Bright Guard';
+  src: url('../fonts/TRTBrightGuardDemo-RegularSlant-BF6ad6e799ae447.ttf') format('truetype');
+  font-weight: 400 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+.font-bright-guard {
+  font-family: 'TRT Bright Guard', 'Playfair Display', serif;
+}
+
 .font-haggia {
-  font-family: 'Haggia', serif;
+  font-family: 'Haggia', 'Playfair Display', serif;
 }
 
 .font-rossce {
