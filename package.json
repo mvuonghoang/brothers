@@ -1,0 +1,10 @@
+{
+  "name": "brothers-nails-lashes-website",
+  "version": "1.0.0",
+  "description": "Multi-page luxury booking website for Brothers Nails & Lashes in La Quinta, CA",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  }
+}

@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Contact &amp; Location | Brothers Nails &amp; Lashes - La Quinta Sanctuary</title>
+  <link rel="icon" type="image/jpeg" href="assets/images/brand/logo.jpg">
+  <!-- Google Fonts & Material Symbols -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,300;0,400;0,500;0,600;1,300&amp;family=Playfair+Display:ital,wght@0,400..700;1,400..700&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "on-surface-variant": "#414846",
+            "on-error-container": "#93000a",
+            "tertiary-fixed-dim": "#e9c176",
+            "on-secondary-container": "#745c00",
+            "on-tertiary": "#ffffff",
+            "on-primary-fixed-variant": "#264e46",
+            "primary-fixed": "#c1ebe0",
+            "on-tertiary-fixed": "#261900",
+            "surface-tint": "#3e665d",
+            "secondary-fixed": "#ffe088",
+            "on-surface": "#1d1b19",
+            "on-secondary-fixed-variant": "#574500",
+            "tertiary-container": "#3d2a00",
+            "surface": "#fef8f3",
+            "primary": "#001e19",
+            "error-container": "#ffdad6",
+            "on-background": "#1d1b19",
+            "outline": "#717976",
+            "on-primary": "#ffffff",
+            "inverse-on-surface": "#f5f0eb",
+            "outline-variant": "#c0c8c5",
+            "on-primary-container": "#759d94",
+            "tertiary-fixed": "#ffdea5",
+            "on-error": "#ffffff",
+            "secondary-container": "#fed65b",
+            "primary-container": "#08342d",
+            "surface-variant": "#e6e2dd",
+            "surface-container": "#f2ede8",
+            "tertiary": "#231700",
+            "inverse-surface": "#32302d",
+            "surface-container-lowest": "#ffffff",
+            "surface-container-low": "#f8f3ee",
+            "surface-container-high": "#ece7e2",
+            "background": "#fef8f3",
+            "secondary": "#735c00",
+            "on-tertiary-container": "#b3904a",
+            "surface-container-highest": "#e6e2dd",
+            "surface-dim": "#ded9d4",
+            "on-primary-fixed": "#00201b",
+            "on-secondary": "#ffffff",
+            "secondary-fixed-dim": "#e9c349",
+            "error": "#ba1a1a",
+            "inverse-primary": "#a5cfc5",
+            "primary-fixed-dim": "#a5cfc5",
+            "surface-bright": "#fef8f3",
+            "on-tertiary-fixed-variant": "#5d4201",
+            "on-secondary-fixed": "#241a00"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.125rem",
+            "lg": "0.25rem",
+            "xl": "0.5rem",
+            "full": "0.75rem"
+          },
+          "spacing": {
+            "space-xl": "2.5rem",
+            "space-lg": "1.5rem",
+            "gutter": "1.5rem",
+            "gutter-mobile": "1rem",
+            "margin": "3rem",
+            "space-md": "1rem",
+            "space-xs": "0.25rem",
+            "margin-mobile": "1.25rem",
+            "space-sm": "0.5rem"
+          },
+          "fontFamily": {
+            "body-lg": ["Plus Jakarta Sans"],
+            "body-md": ["Plus Jakarta Sans"],
+            "label-sm": ["Plus Jakarta Sans"],
+            "title-lg": ["Plus Jakarta Sans"],
+            "headline-lg": ["Playfair Display"],
+            "title-md": ["Plus Jakarta Sans"],
+            "headline-md": ["Playfair Display"],
+            "headline-lg-mobile": ["Playfair Display"],
+            "body-sm": ["Plus Jakarta Sans"],
+            "display-lg-mobile": ["Playfair Display"],
+            "label-lg": ["Plus Jakarta Sans"],
+            "display-lg": ["Playfair Display"]
+          },
+          "fontSize": {
+            "body-lg": ["17px", { "lineHeight": "26px", "fontWeight": "400" }],
+            "body-md": ["15px", { "lineHeight": "22px", "fontWeight": "400" }],
+            "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.1em", "fontWeight": "600" }],
+            "title-lg": ["20px", { "lineHeight": "28px", "fontWeight": "600" }],
+            "headline-lg": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.01em", "fontWeight": "500" }],
+            "title-md": ["16px", { "lineHeight": "24px", "fontWeight": "600" }],
+            "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "500" }],
+            "headline-lg-mobile": ["26px", { "lineHeight": "34px", "fontWeight": "500" }],
+            "body-sm": ["13px", { "lineHeight": "18px", "fontWeight": "400" }],
+            "display-lg-mobile": ["34px", { "lineHeight": "42px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+            "label-lg": ["13px", { "lineHeight": "18px", "letterSpacing": "0.08em", "fontWeight": "600" }],
+            "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "600" }]
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="assets/css/custom.css">
+</head>
+<body class="bg-background text-on-surface antialiased selection:bg-secondary-fixed selection:text-primary">
+  <!-- TOP APP BAR / NAVIGATION (Shared Component) -->
+  <header class="docked full-width top-0 sticky z-50 bg-surface/95 dark:bg-primary/95 backdrop-blur-md border-b border-outline-variant/30 dark:border-primary-container shadow-sm dark:shadow-none transition-all duration-200">
+    <div class="max-w-7xl mx-auto px-6 md:px-12 flex justify-between items-center h-20">
+      <!-- Brand Logo Left -->
+      <a aria-label="Brothers Nails &amp; Lashes Home" class="flex items-center gap-3 group focus:outline-none" href="index.html">
+        <img alt="Brothers Nails &amp; Lashes" class="h-10 md:h-12 w-auto object-contain brand-logo-header transition-transform duration-300 group-hover:scale-105" src="assets/images/brand/horizontal-logo-transparent.png">
+      </a>
+      <!-- Desktop Navigation Links (Active: Contact) -->
+      <nav class="hidden md:flex items-center space-x-8 font-label-lg text-label-lg tracking-wider">
+        <a class="text-on-surface-variant dark:text-surface-dim hover:text-secondary dark:hover:text-secondary-fixed transition-colors duration-200" href="index.html">Home</a>
+        <a class="text-on-surface-variant dark:text-surface-dim hover:text-secondary dark:hover:text-secondary-fixed transition-colors duration-200" href="about.html">About</a>
+        <a class="text-on-surface-variant dark:text-surface-dim hover:text-secondary dark:hover:text-secondary-fixed transition-colors duration-200" href="services.html">Services</a>
+        <a class="text-on-surface-variant dark:text-surface-dim hover:text-secondary dark:hover:text-secondary-fixed transition-colors duration-200" href="gallery.html">Gallery</a>
+        <a class="text-secondary dark:text-secondary-fixed font-semibold border-b-2 border-secondary dark:border-secondary-fixed pb-1 transition-colors duration-200" href="contact.html">Contact</a>
+      </nav>
+      <!-- Primary Action CTA -->
+      <div class="flex items-center gap-4">
+        <a class="gold-shimmer text-primary font-title-md text-title-md px-6 py-2.5 rounded-lg shadow-sm hover:shadow-md transition-all duration-300 transform hover:-translate-y-0.5 active:scale-[0.98] border border-secondary-fixed-dim/40 flex items-center gap-2 group" href="#reservation-portal" data-booking>
+          <span class="font-semibold tracking-wide">Book Now</span>
+          <span class="material-symbols-outlined text-base transition-transform group-hover:translate-x-1" data-icon="calendar_month">calendar_month</span>
+        </a>
+        <!-- Mobile Menu Toggle Button -->
+        <button aria-label="Toggle Navigation Menu" class="md:hidden p-2 text-primary dark:text-primary-fixed focus:outline-none" id="mobileMenuBtn">
+          <span class="material-symbols-outlined text-2xl" data-icon="menu">menu</span>
+        </button>
+      </div>
+    </div>
+    <!-- Mobile Navigation Drawer -->
+    <div class="hidden md:hidden bg-surface-container-lowest border-b border-outline-variant/30 px-6 py-6 transition-all" id="mobileMenu">
+      <div class="flex flex-col space-y-4 font-label-lg text-label-lg">
+        <a class="text-on-surface-variant hover:text-primary py-1" href="index.html">Home</a>
+        <a class="text-on-surface-variant hover:text-primary py-1" href="about.html">About</a>
+        <a class="text-on-surface-variant hover:text-primary py-1" href="services.html">Services</a>
+        <a class="text-on-surface-variant hover:text-primary py-1" href="gallery.html">Gallery</a>
+        <a class="text-secondary font-semibold py-1" href="contact.html">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO SECTION: Desert Sanctuary Identity -->
+  <section class="relative pt-16 pb-20 md:pt-24 md:pb-28 overflow-hidden bg-surface-container-low border-b border-outline-variant/30">
+    <div class="absolute inset-0 opacity-[0.03] pointer-events-none bg-[radial-gradient(#08342d_1px,transparent_1px)] [background-size:16px_16px]"></div>
+    <div class="max-w-7xl mx-auto px-6 md:px-12 relative z-10 text-center">
+      <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-surface-container-lowest border border-secondary-fixed/60 shadow-xs mb-6">
+        <span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+        <span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-semibold">GET IN TOUCH • PALM DESERT SANCTUARY</span>
+      </div>
+      <h1 class="font-display-lg text-display-lg md:text-[54px] font-semibold text-primary max-w-4xl mx-auto leading-tight mb-6">
+        Connect with Our Artisans
+      </h1>
+      <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto leading-relaxed">
+        Whether you wish to reserve a bespoke nail session, inquire about lash artistry, or plan a private spa gathering, we welcome you to reach out to our La Quinta salon team.
+      </p>
+      <!-- Quick Contact Pills -->
+      <div class="flex flex-wrap items-center justify-center gap-6 mt-10">
+        <a class="inline-flex items-center gap-2 text-primary font-title-md text-title-md hover:text-secondary transition-colors duration-200 group" href="tel:7603000112">
+          <span class="w-9 h-9 rounded-full bg-primary-container text-secondary-fixed flex items-center justify-center group-hover:scale-105 transition-transform">
+            <span class="material-symbols-outlined text-[18px]">call</span>
+          </span>
+          <span>(760) 300-0112</span>
+        </a>
+        <span class="text-outline-variant hidden sm:inline">•</span>
+        <div class="inline-flex items-center gap-2 text-on-surface-variant font-body-md text-body-md">
+          <span class="w-9 h-9 rounded-full bg-surface-container text-primary flex items-center justify-center">
+            <span class="material-symbols-outlined text-[18px]">pin_drop</span>
+          </span>
+          <span>78982 CA-111, Suite 1B, La Quinta, CA 92253</span>
+        </div>
+        <span class="text-outline-variant hidden sm:inline">•</span>
+        <div class="inline-flex items-center gap-2 text-on-surface-variant font-body-md text-body-md">
+          <span class="w-9 h-9 rounded-full bg-surface-container text-primary flex items-center justify-center">
+            <span class="material-symbols-outlined text-[18px]">schedule</span>
+          </span>
+          <span>Mon–Fri: 9am–7pm • Sat: 9am–6pm • Sun: 10am–5pm</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MAIN CONTACT GRID -->
+  <section class="py-20 md:py-28 max-w-7xl mx-auto px-6 md:px-12">
+    <div class="text-center max-w-3xl mx-auto mb-16">
+      <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-surface-container border border-secondary-fixed/50 shadow-xs mb-4">
+        <span class="material-symbols-outlined text-sm text-secondary">diamond</span>
+        <span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-semibold">Boutique Concierge</span>
+      </div>
+      <h2 class="font-headline-lg text-headline-lg md:text-[40px] font-medium text-primary tracking-tight">
+        Direct Inquiries &amp; Boutique Details
+      </h2>
+      <p class="font-body-md text-body-md text-on-surface-variant mt-3 leading-relaxed max-w-2xl mx-auto">
+        Nestled in the serene Coachella Valley, our salon blends refined European nail craftsmanship with warm desert hospitality. Connect directly with our concierge team below.
+      </p>
+    </div>
+
+    <!-- 3 Elevated Info Cards Row -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+      <!-- Sanctuary Address Card -->
+      <div class="p-8 rounded-xl bg-surface-container-lowest gold-border-hairline shadow-sm hover:border-secondary-fixed hover:shadow-md transition-all duration-300 flex flex-col justify-between">
+        <div>
+          <div class="w-12 h-12 rounded-lg bg-surface-container-low text-primary flex items-center justify-center mb-6 border border-outline-variant/30">
+            <span class="material-symbols-outlined text-2xl text-secondary">storefront</span>
+          </div>
+          <span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-semibold block mb-1">Location &amp; Visit</span>
+          <h3 class="font-title-md text-title-md text-primary font-semibold mb-2">Sanctuary Address</h3>
+          <p class="font-body-md text-body-md text-on-surface leading-relaxed">
+            78982 CA-111, Suite 1B<br>
+            La Quinta, CA 92253
+          </p>
+        </div>
+        <div class="mt-6 pt-4 border-t border-outline-variant/20 flex items-center gap-2 text-label-sm text-secondary font-semibold">
+          <span class="material-symbols-outlined text-base">local_parking</span>
+          <span>Complimentary Private Parking</span>
+        </div>
+      </div>
+
+      <!-- Appointments & Text Desk Card -->
+      <div class="p-8 rounded-xl bg-surface-container-lowest gold-border-hairline shadow-sm hover:border-secondary-fixed hover:shadow-md transition-all duration-300 flex flex-col justify-between">
+        <div>
+          <div class="w-12 h-12 rounded-lg bg-surface-container-low text-primary flex items-center justify-center mb-6 border border-outline-variant/30">
+            <span class="material-symbols-outlined text-2xl text-secondary">phone_iphone</span>
+          </div>
+          <span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-semibold block mb-1">Direct Line</span>
+          <h3 class="font-title-md text-title-md text-primary font-semibold mb-2">Appointments &amp; Text Desk</h3>
+          <a class="block font-title-md text-title-md text-primary hover:text-secondary font-bold transition-colors mb-1.5" href="tel:7603000112">
+            (760) 300-0112
+          </a>
+          <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Text or call for immediate queries, custom nail art consultations, or special requests. Instagram: <a href="https://www.instagram.com/brothersnailslashes" target="_blank" rel="noopener noreferrer" class="text-secondary font-semibold hover:underline">@brothersnailslashes</a>
+          </p>
+        </div>
+        <div class="mt-6 pt-4 border-t border-outline-variant/20 flex items-center gap-2 text-label-sm text-secondary font-semibold">
+          <span class="material-symbols-outlined text-base">chat</span>
+          <span>Instant SMS Inquiry Available</span>
+        </div>
+      </div>
+
+      <!-- Sanctuary Hours Card -->
+      <div class="p-8 rounded-xl bg-surface-container-lowest gold-border-hairline shadow-sm hover:border-secondary-fixed hover:shadow-md transition-all duration-300 flex flex-col justify-between">
+        <div>
+          <div class="w-12 h-12 rounded-lg bg-surface-container-low text-primary flex items-center justify-center mb-6 border border-outline-variant/30">
+            <span class="material-symbols-outlined text-2xl text-secondary">schedule</span>
+          </div>
+          <span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-semibold block mb-1">Weekly Timings</span>
+          <h3 class="font-title-md text-title-md text-primary font-semibold mb-3">Sanctuary Hours</h3>
+          <div class="space-y-2 font-body-sm text-body-sm">
+            <div class="flex justify-between items-center pb-1.5 border-b border-outline-variant/20">
+              <span class="text-on-surface-variant">Monday – Friday</span>
+              <span class="font-semibold text-primary">9:00 AM – 7:00 PM</span>
+            </div>
+            <div class="flex justify-between items-center pb-1.5 border-b border-outline-variant/20">
+              <span class="text-on-surface-variant">Saturday</span>
+              <span class="font-semibold text-primary">9:00 AM – 6:00 PM</span>
+            </div>
+            <div class="flex justify-between items-center pt-0.5">
+              <span class="text-on-surface-variant">Sunday</span>
+              <span class="font-semibold text-primary">10:00 AM – 5:00 PM</span>
+            </div>
+          </div>
+        </div>
+        <div class="mt-6 pt-4 border-t border-outline-variant/20 flex items-center gap-2 text-label-sm text-secondary font-semibold">
+          <span class="material-symbols-outlined text-base">event_available</span>
+          <span>Open 7 Days a Week</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2-Column Balanced Showcase Cards -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
+      <!-- Instant Online Booking Feature Card -->
+      <div class="p-8 md:p-10 rounded-xl bg-primary-container text-on-primary relative overflow-hidden shadow-lg border border-secondary-fixed/20 flex flex-col justify-between" id="reservation-portal">
+        <div class="absolute -right-8 -bottom-8 w-48 h-48 bg-secondary/10 rounded-full blur-2xl pointer-events-none"></div>
+        <div class="relative z-10">
+          <div class="flex items-center gap-2 mb-4">
+            <span class="material-symbols-outlined text-secondary-fixed text-lg">bolt</span>
+            <span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary-fixed font-semibold">Fastest Way to Reserve</span>
+          </div>
+          <h3 class="font-headline-md text-headline-md font-medium text-surface mb-3">Instant Online Booking</h3>
+          <p class="font-body-md text-body-md text-on-primary-container leading-relaxed mb-8">
+            Book directly through our interactive reservation portal for immediate slot selection, artisan preference, and customized signature service add-ons.
+          </p>
+        </div>
+        <div class="relative z-10 pt-4 border-t border-secondary-fixed/15 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+          <a class="inline-flex items-center justify-center py-3.5 px-8 rounded bg-secondary-fixed text-on-secondary-fixed font-label-lg text-label-lg tracking-wider hover:bg-secondary-fixed-dim transition-all duration-200 active:scale-[0.98] font-bold shadow-md gap-2" href="#reservation-portal" data-booking>
+            <span>Book Your Visit Now</span>
+            <span class="material-symbols-outlined text-lg">arrow_forward</span>
+          </a>
+          <span class="text-xs text-secondary-fixed/80 flex items-center gap-1.5">
+            <span class="material-symbols-outlined text-sm text-secondary-fixed">check_circle</span>
+            Zero Booking Fees
+          </span>
+        </div>
+      </div>
+
+      <!-- Private Gatherings & Bridal Parties Feature Card -->
+      <div class="p-8 md:p-10 rounded-xl bg-surface-container-lowest gold-border-hairline shadow-md flex flex-col justify-between hover:border-secondary-fixed transition-all duration-300">
+        <div>
+          <div class="flex items-center gap-2 mb-4">
+            <span class="material-symbols-outlined text-secondary text-lg">celebration</span>
+            <span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-semibold">Private Events &amp; Celebrations</span>
+          </div>
+          <h3 class="font-headline-md text-headline-md font-medium text-primary mb-3">Private Gatherings &amp; Bridal Parties</h3>
+          <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed mb-8">
+            Planning a wedding party, birthday celebration, or corporate executive retreat? We curate bespoke salon group sessions with complimentary refreshments and dedicated artisans.
+          </p>
+        </div>
+        <div class="pt-4 border-t border-outline-variant/20 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+          <a class="inline-flex items-center justify-center py-3.5 px-8 rounded bg-surface-container hover:bg-surface-container-high border border-outline-variant/40 text-primary font-label-lg text-label-lg tracking-wider transition-all duration-200 active:scale-[0.98] font-bold gap-2" href="tel:7603000112">
+            <span class="material-symbols-outlined text-base text-secondary">call</span>
+            <span>Call (760) 300-0112</span>
+          </a>
+          <span class="text-xs text-on-surface-variant flex items-center gap-1.5">
+            <span class="material-symbols-outlined text-sm text-secondary">group</span>
+            Customized Group Packages
+          </span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INTERACTIVE MAP & ARRIVAL EXPERIENCE -->
+  <section class="py-20 bg-surface-container-low border-t border-outline-variant/30">
+    <div class="max-w-7xl mx-auto px-6 md:px-12">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-semibold">LOCATION &amp; ARRIVAL</span>
+        <h2 class="font-headline-lg text-headline-lg font-medium text-primary mt-1">Our Desert Oasis Setting</h2>
+        <p class="font-body-md text-body-md text-on-surface-variant mt-2">
+          Centrally situated at 78982 CA-111, Suite 1B in prestigious La Quinta, near Washington St, Old Town La Quinta, and PGA West resorts.
+        </p>
+      </div>
+      <!-- Map & Directions Bento Grid -->
+      <div class="space-y-10">
+        <!-- Upper Bento: Map Canvas & Immediate Navigation Hub -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+          <!-- Interactive-feel Modern Styled Map Canvas (7 cols) -->
+          <div class="lg:col-span-7 rounded-xl overflow-hidden gold-border-hairline shadow-md relative min-h-[460px] bg-surface-container flex flex-col justify-between">
+            <img class="absolute inset-0 w-full h-full object-cover filter contrast-105 brightness-95" alt="La Quinta Map View" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDMafs4QgJDKoV2dFl2gcJsoqAMD7YHCAi8uXrnx724D8b2iGp6fq_8CoJZp3t-Rojc-B4JsQtTxEYNjg3ruk-xfAuBsuFOVOR1OIWhR6XViNCyDBM3gAQGn-6VNCNlGU9gddz7xsLlJeqJTbfFt9JFvAI3wcLmkKg67xUUMOsNKzFnnNcsWlJ6hRdHi-k2BJxR2H4M_-BndayeYkYe8L65flETtLPStm1lJ5ICO9M">
+            <div class="absolute inset-0 bg-primary/10 pointer-events-none"></div>
+
+            <!-- Map Top Header Controls Bar -->
+            <div class="relative z-10 p-4 md:p-6 flex items-center justify-between gap-3 pointer-events-auto">
+              <div class="inline-flex items-center rounded-lg bg-surface/95 backdrop-blur-md p-1 border border-outline-variant/40 shadow-sm">
+                <span class="px-3 py-1 text-xs font-semibold rounded bg-primary text-surface shadow-xs">Sanctuary Pin</span>
+                <a href="https://www.google.com/maps/search/?api=1&amp;query=78982+CA-111+Suite+1B+La+Quinta+CA+92253" target="_blank" rel="noopener noreferrer" class="px-3 py-1 text-xs font-medium rounded text-on-surface-variant hover:text-primary transition-colors">Open Live Google Map ↗</a>
+              </div>
+
+              <div class="hidden sm:inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-surface/95 backdrop-blur-md border border-secondary-fixed/50 shadow-sm text-xs font-medium text-primary">
+                <span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+                <span>78982 CA-111, Suite 1B</span>
+              </div>
+            </div>
+
+            <!-- Center Floating Location Marker (Pulse Pin) -->
+            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 pointer-events-none flex flex-col items-center">
+              <div class="flex items-center gap-2 px-3 py-1.5 rounded-full bg-primary text-secondary-fixed shadow-lg border border-secondary-fixed/30 mb-1 transform -translate-y-2">
+                <span class="material-symbols-outlined text-sm">spa</span>
+                <span class="text-xs font-bold tracking-wide">Brothers Nails &amp; Lashes</span>
+              </div>
+              <div class="relative flex items-center justify-center">
+                <span class="animate-ping absolute inline-flex h-8 w-8 rounded-full bg-secondary-fixed opacity-75"></span>
+                <span class="relative inline-flex rounded-full h-5 w-5 bg-primary border-2 border-secondary-fixed shadow-md"></span>
+              </div>
+            </div>
+
+            <!-- Location Bottom Overlay Badge -->
+            <div class="relative z-10 p-4 md:p-6 mt-auto">
+              <div class="bg-surface/95 backdrop-blur-md p-5 rounded-xl border border-secondary-fixed/40 shadow-lg">
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                  <div class="flex items-start gap-3.5">
+                    <div class="w-11 h-11 rounded-full bg-primary-container text-secondary-fixed flex items-center justify-center shrink-0 border border-secondary-fixed/30 shadow-xs">
+                      <span class="material-symbols-outlined text-xl">location_on</span>
+                    </div>
+                    <div>
+                      <h3 class="font-title-md text-title-md font-semibold text-primary leading-snug">Brothers Nails &amp; Lashes</h3>
+                      <p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">78982 CA-111, Suite 1B • La Quinta, CA 92253</p>
+                    </div>
+                  </div>
+                  <div class="flex flex-wrap sm:flex-col gap-1 sm:text-right text-xs font-medium text-secondary">
+                    <span class="inline-flex items-center gap-1"><span class="material-symbols-outlined text-xs">directions_car</span> 5 min from Old Town</span>
+                    <span class="inline-flex items-center gap-1"><span class="material-symbols-outlined text-xs">golf_course</span> 8 min from PGA West</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Quick Direct Navigation Guide & App Launchers (5 cols) -->
+          <div class="lg:col-span-5 bg-surface-container-lowest p-6 md:p-8 rounded-xl gold-border-hairline shadow-md flex flex-col justify-between">
+            <div>
+              <div class="flex items-center gap-2 mb-2">
+                <span class="material-symbols-outlined text-secondary text-lg">near_me</span>
+                <span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-semibold">DIRECTIONS &amp; NAVIGATION</span>
+              </div>
+              <h3 class="font-headline-md text-headline-md font-medium text-primary mb-3">Seamless Desert Arrival</h3>
+              <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed mb-6">
+                Centrally located along Highway 111 in La Quinta with effortless accessibility from all major Coachella Valley resorts and country clubs.
+              </p>
+
+              <!-- 1-Click Map Launcher Buttons -->
+              <div class="grid grid-cols-2 gap-2.5 mb-6">
+                <a href="https://www.google.com/maps/search/?api=1&amp;query=78982+CA-111+Suite+1B+La+Quinta+CA+92253" target="_blank" rel="noopener noreferrer" class="px-3.5 py-2.5 rounded bg-surface-container-low hover:bg-surface-container-high border border-outline-variant/40 text-primary font-label-sm text-label-sm font-semibold flex items-center justify-center gap-2 transition-colors">
+                  <span class="material-symbols-outlined text-base text-secondary">map</span>
+                  <span>Google Maps</span>
+                </a>
+                <a href="https://maps.apple.com/?q=78982+CA-111,+Suite+1B,+La+Quinta,+CA+92253" target="_blank" rel="noopener noreferrer" class="px-3.5 py-2.5 rounded bg-surface-container-low hover:bg-surface-container-high border border-outline-variant/40 text-primary font-label-sm text-label-sm font-semibold flex items-center justify-center gap-2 transition-colors">
+                  <span class="material-symbols-outlined text-base text-secondary">explore</span>
+                  <span>Apple Maps</span>
+                </a>
+                <a href="https://waze.com/ul?q=78982+CA-111+Suite+1B+La+Quinta+CA+92253" target="_blank" rel="noopener noreferrer" class="px-3.5 py-2.5 rounded bg-surface-container-low hover:bg-surface-container-high border border-outline-variant/40 text-primary font-label-sm text-label-sm font-semibold flex items-center justify-center gap-2 transition-colors">
+                  <span class="material-symbols-outlined text-base text-secondary">navigation</span>
+                  <span>Waze</span>
+                </a>
+                <button onclick="navigator.clipboard ? navigator.clipboard.writeText('78982 CA-111, Suite 1B, La Quinta, CA 92253') : null; this.querySelector('span:last-child').textContent='Copied!'; setTimeout(() => this.querySelector('span:last-child').textContent='Copy Address', 2000);" class="px-3.5 py-2.5 rounded bg-surface-container-low hover:bg-surface-container-high border border-outline-variant/40 text-primary font-label-sm text-label-sm font-semibold flex items-center justify-center gap-2 transition-colors">
+                  <span class="material-symbols-outlined text-base text-secondary">content_copy</span>
+                  <span>Copy Address</span>
+                </button>
+              </div>
+
+              <!-- Route Directions Breakdown -->
+              <div class="space-y-3.5 border-t border-outline-variant/20 pt-5">
+                <div class="flex items-start gap-3">
+                  <span class="w-6 h-6 rounded-full bg-primary/10 text-primary text-xs font-bold flex items-center justify-center shrink-0 mt-0.5">1</span>
+                  <div>
+                    <p class="font-label-sm text-label-sm text-primary font-bold uppercase tracking-wider">From Palm Desert / CA-111</p>
+                    <p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Head east on Highway 111 into La Quinta to 78982 CA-111, Suite 1B (near Washington St).</p>
+                  </div>
+                </div>
+                <div class="flex items-start gap-3">
+                  <span class="w-6 h-6 rounded-full bg-primary/10 text-primary text-xs font-bold flex items-center justify-center shrink-0 mt-0.5">2</span>
+                  <div>
+                    <p class="font-label-sm text-label-sm text-primary font-bold uppercase tracking-wider">From I-10 Freeway</p>
+                    <p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Take Washington St exit south directly toward Highway 111 in La Quinta.</p>
+                  </div>
+                </div>
+                <div class="flex items-start gap-3">
+                  <span class="w-6 h-6 rounded-full bg-primary/10 text-primary text-xs font-bold flex items-center justify-center shrink-0 mt-0.5">3</span>
+                  <div>
+                    <p class="font-label-sm text-label-sm text-primary font-bold uppercase tracking-wider">Parking &amp; Accessibility</p>
+                    <p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Complimentary designated storefront parking and barrier-free step-free entry.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Drive Times Quick Reference Bar -->
+            <div class="mt-6 pt-4 border-t border-outline-variant/20 flex flex-wrap items-center justify-between gap-3 text-xs text-on-surface-variant">
+              <span class="inline-flex items-center gap-1"><span class="material-symbols-outlined text-sm text-secondary">schedule</span> 5 min Old Town</span>
+              <span>•</span>
+              <span class="inline-flex items-center gap-1"><span class="material-symbols-outlined text-sm text-secondary">schedule</span> 8 min PGA West</span>
+              <span>•</span>
+              <span class="inline-flex items-center gap-1"><span class="material-symbols-outlined text-sm text-secondary">schedule</span> 12 min Indian Wells</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Lower Bento: 4 Sanctuary Privilege & Amenity Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div class="p-6 rounded-xl bg-surface-container-lowest gold-border-hairline shadow-sm hover:border-secondary-fixed transition-all duration-300">
+            <div class="w-11 h-11 rounded-lg bg-primary-container text-secondary-fixed flex items-center justify-center mb-4 border border-secondary-fixed/20 shadow-xs">
+              <span class="material-symbols-outlined text-xl">sanitizer</span>
+            </div>
+            <h4 class="font-title-md text-title-md text-primary font-semibold mb-1.5">Autoclave Hospital-Grade Sterilization</h4>
+            <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              Every tool undergoes 100% medical-grade autoclave steam sterilization and is sealed in single-use hygienic pouches.
+            </p>
+          </div>
+
+          <div class="p-6 rounded-xl bg-surface-container-lowest gold-border-hairline shadow-sm hover:border-secondary-fixed transition-all duration-300">
+            <div class="w-11 h-11 rounded-lg bg-primary-container text-secondary-fixed flex items-center justify-center mb-4 border border-secondary-fixed/20 shadow-xs">
+              <span class="material-symbols-outlined text-xl">local_cafe</span>
+            </div>
+            <h4 class="font-title-md text-title-md text-primary font-semibold mb-1.5">Complimentary Spa Refreshments</h4>
+            <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              Relax with artisanal herbal teas, chilled organic fruit-infused waters, or refreshments during your appointment.
+            </p>
+          </div>
+
+          <div class="p-6 rounded-xl bg-surface-container-lowest gold-border-hairline shadow-sm hover:border-secondary-fixed transition-all duration-300">
+            <div class="w-11 h-11 rounded-lg bg-primary-container text-secondary-fixed flex items-center justify-center mb-4 border border-secondary-fixed/20 shadow-xs">
+              <span class="material-symbols-outlined text-xl">spa</span>
+            </div>
+            <h4 class="font-title-md text-title-md text-primary font-semibold mb-1.5">Quiet Lash &amp; Relaxation Lounge</h4>
+            <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              Dedicated serene suites designed for deep comfort during meticulous lash extensions and eyebrow styling.
+            </p>
+          </div>
+
+          <div class="p-6 rounded-xl bg-surface-container-lowest gold-border-hairline shadow-sm hover:border-secondary-fixed transition-all duration-300">
+            <div class="w-11 h-11 rounded-lg bg-primary-container text-secondary-fixed flex items-center justify-center mb-4 border border-secondary-fixed/20 shadow-xs">
+              <span class="material-symbols-outlined text-xl">how_to_reg</span>
+            </div>
+            <h4 class="font-title-md text-title-md text-primary font-semibold mb-1.5">Appointments &amp; Walk-ins</h4>
+            <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              Advance bookings are encouraged to guarantee your preferred artisan; walk-ins accommodated promptly based on availability.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EDITORIAL SANCTUARY GALLERY TEASER -->
+  <section class="py-16 bg-surface border-t border-outline-variant/20">
+    <div class="max-w-7xl mx-auto px-6 md:px-12">
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4">
+        <div>
+          <span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-semibold">TRANQUIL AMBIANCE</span>
+          <h2 class="font-headline-md text-headline-md font-medium text-primary mt-1">A Glimpse into Our Salon</h2>
+        </div>
+        <a class="inline-flex items-center gap-2 text-secondary font-title-md text-title-md hover:underline" href="gallery.html">
+          <span>View Full Gallery</span>
+          <span class="material-symbols-outlined text-sm">arrow_forward</span>
+        </a>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="rounded-lg overflow-hidden h-72 relative group gold-border-hairline shadow-sm">
+          <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Spa Pedicure Sanctuary" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBoplYToTDyvItB3VJ99EH4lD6pQykq3xMy6OvVepg5QHgWehGoNnwuD-Hy-goUP6OCoch4BeKJB9lLQgPdB6hJmksXzujvpZ3NeaYD2XxjluUB9-hpzjNlnxI9Q_IwQEX-LpPyIYPFydZ2Y-6iSKjhbcsyYcwNCZeOuyZzag-gzMyDTriD2-E-hFHl26rX6lly7nLSxunAvlAd9-nT3Ak3Fn90nahe2wkEXGJ5Gzo">
+          <div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent flex items-end p-6">
+            <p class="font-title-md text-title-md text-surface">Spa Pedicure Sanctuary</p>
+          </div>
+        </div>
+        <div class="rounded-lg overflow-hidden h-72 relative group gold-border-hairline shadow-sm">
+          <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Signature Nail Artistry" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB2La6axmTH43y5TUlzEXYv2djLHx-wdNjW6uPUeVK08of-z9KGinPMb7gG2msWHhplQe26TwWTUDVYLBNHDq1ZYwXso88dWEWY29qUVGiltpaqmalQjP03pJgfhZjBPmNSqwonldfKwqhKA46swa8jeR-Qh1mkLNdGSf3rgvRFC8qvqk7FjbF8tTg2QQY2LlhAvwMoLX2uyPOZ2aTvbCkjtokSoGlCR9VRknhfYEE">
+          <div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent flex items-end p-6">
+            <p class="font-title-md text-title-md text-surface">Signature Nail Artistry</p>
+          </div>
+        </div>
+        <div class="rounded-lg overflow-hidden h-72 relative group gold-border-hairline shadow-sm">
+          <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Private Lash Suite" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAezDxPDr12XV_4ZleXtUFP1c-hxNZvOAPWIxaE6Pul--MnktJHg1bpY8jJuUVSKFmWudhdC1Nft1xR5HW7OuuvxZFDoG8CP0B5KYkkedEOKXcTUoORnTApCkVuuDRqruKmZsP9M8X7tytcC17_4_07XQoDdvKp_1I--rCKAICmqRY3XIMjKSWS_ZOv4sDI6SQpcHZPbJoZodJmD5_NksGXSZ88zZyQE0S0bNCEj-g">
+          <div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent flex items-end p-6">
+            <p class="font-title-md text-title-md text-surface">Private Lash Suite</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STANDARDIZED FOOTER -->
+  <footer class="w-full border-t border-secondary-fixed/30 bg-primary-container text-surface-container-high transition-colors duration-200 relative overflow-hidden">
+    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 h-[1px] bg-gradient-to-r from-transparent via-secondary-fixed/40 to-transparent pointer-events-none"></div>
+    <div class="absolute -top-32 right-12 w-96 h-96 bg-secondary-fixed/10 rounded-full blur-3xl pointer-events-none"></div>
+    <div class="w-full max-w-7xl mx-auto px-6 md:px-12 pt-16 pb-12 relative z-10">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-8 pb-14 border-b border-secondary-fixed/20">
+        <!-- Brand Column (6 cols) -->
+        <div class="lg:col-span-6 space-y-5">
+          <a aria-label="Brothers Nails &amp; Lashes" class="inline-block group focus:outline-none" href="index.html">
+            <img alt="Brothers Nails &amp; Lashes" class="h-12 md:h-14 w-auto object-contain brightness-110 drop-shadow transition-transform duration-300 group-hover:scale-105" src="assets/images/brand/horizontal-logo-transparent.png">
+          </a>
+          <p class="font-body-md text-surface-container-high/90 max-w-md leading-relaxed">
+            La Quinta's Premier Bespoke Nail &amp; Lash Sanctuary. Merging classical European nail precision with signature lash artistry in an atmosphere of tranquil desert luxury.
+          </p>
+          <div class="text-xs text-secondary-fixed/90 space-y-1">
+            <p>78982 CA-111, Suite 1B, La Quinta, CA 92253 • <a href="tel:7603000112" class="underline hover:text-white">(760) 300-0112</a></p>
+            <p>Mon–Fri: 9am–7pm • Sat: 9am–6pm • Sun: 10am–5pm</p>
+          </div>
+          <div class="flex items-center gap-3 pt-1">
+            <a aria-label="Instagram @brothersnailslashes" class="w-10 h-10 rounded-full bg-primary/60 border border-secondary-fixed/30 flex items-center justify-center text-secondary-fixed hover:bg-secondary-fixed hover:text-primary hover:shadow-lg transition-all duration-300" href="https://www.instagram.com/brothersnailslashes" target="_blank" rel="noopener noreferrer">
+              <span class="material-symbols-outlined text-lg" data-icon="photo_camera">photo_camera</span>
+            </a>
+            <a aria-label="Google Maps" class="w-10 h-10 rounded-full bg-primary/60 border border-secondary-fixed/30 flex items-center justify-center text-secondary-fixed hover:bg-secondary-fixed hover:text-primary hover:shadow-lg transition-all duration-300" href="https://www.google.com/maps/search/?api=1&amp;query=78982+CA-111+Suite+1B+La+Quinta+CA+92253" target="_blank" rel="noopener noreferrer">
+              <span class="material-symbols-outlined text-lg" data-icon="location_on">location_on</span>
+            </a>
+            <a aria-label="Call Brothers Nails &amp; Lashes" class="w-10 h-10 rounded-full bg-primary/60 border border-secondary-fixed/30 flex items-center justify-center text-secondary-fixed hover:bg-secondary-fixed hover:text-primary hover:shadow-lg transition-all duration-300" href="tel:7603000112">
+              <span class="material-symbols-outlined text-lg" data-icon="call">call</span>
+            </a>
+          </div>
+        </div>
+        <!-- Explore Links (3 cols) -->
+        <div class="lg:col-span-3 space-y-4">
+          <p class="font-label-lg font-semibold tracking-widest text-secondary-fixed uppercase text-xs">Explore</p>
+          <ul class="space-y-2.5 font-body-sm text-surface-container-high/85">
+            <li><a class="hover:text-secondary-fixed transition-colors duration-200 inline-flex items-center gap-1.5" href="index.html">Home</a></li>
+            <li><a class="hover:text-secondary-fixed transition-colors duration-200 inline-flex items-center gap-1.5" href="about.html">About</a></li>
+            <li><a class="hover:text-secondary-fixed transition-colors duration-200 inline-flex items-center gap-1.5" href="services.html">Services</a></li>
+            <li><a class="hover:text-secondary-fixed transition-colors duration-200 inline-flex items-center gap-1.5" href="gallery.html">Gallery</a></li>
+            <li><a class="text-secondary-fixed font-semibold transition-colors duration-200 inline-flex items-center gap-1.5" href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <!-- Help Links (3 cols) -->
+        <div class="lg:col-span-3 space-y-4">
+          <p class="font-label-lg font-semibold tracking-widest text-secondary-fixed uppercase text-xs">Help</p>
+          <ul class="space-y-2.5 font-body-sm text-surface-container-high/85">
+            <li><a class="hover:text-secondary-fixed transition-colors duration-200 inline-flex items-center gap-1.5" href="#reservation-portal" data-booking>Book Online</a></li>
+            <li><a class="hover:text-secondary-fixed transition-colors duration-200 inline-flex items-center gap-1.5" href="#faq">FAQ's</a></li>
+            <li><a class="hover:text-secondary-fixed transition-colors duration-200 inline-flex items-center gap-1.5" href="#policy">Salon Policy</a></li>
+          </ul>
+        </div>
+      </div>
+      <!-- Bottom Bar & Legal Links -->
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 font-body-sm text-xs text-on-primary-container">
+        <p>© 2026 Brothers Nails &amp; Lashes. All rights reserved. 78982 CA-111, Suite 1B, La Quinta, CA 92253.</p>
+        <div class="flex items-center space-x-6">
+          <a class="hover:text-secondary-fixed transition-colors duration-200" href="#privacy">Privacy Policy</a>
+          <a class="hover:text-secondary-fixed transition-colors duration-200" href="#terms">Terms of Service</a>
+          <a class="hover:text-secondary-fixed transition-colors duration-200" href="#accessibility">Accessibility</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>BROTHERS Nails &amp; Lashes | Luxury Salon &amp; Spa Oasis in La Quinta, California</title>
+  <link rel="icon" type="image/jpeg" href="assets/images/brand/logo.jpg">
+  <!-- Material Symbols -->
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+  <!-- Google Fonts for Playfair Display, Plus Jakarta Sans, Kanit, Montserrat & Cormorant Garamond -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..700;1,6..96,400..700&amp;family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,600&amp;family=Kanit:ital,wght@0,300;0,400;0,500;0,600;1,300&amp;family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <!-- Tailwind Theme Configuration Verbatim -->
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "on-error": "#ffffff",
+            "on-background": "#1d1b19",
+            "on-secondary-fixed-variant": "#574500",
+            "inverse-surface": "#32302d",
+            "on-surface-variant": "#414846",
+            "primary-fixed": "#c1ebe0",
+            "inverse-on-surface": "#f5f0eb",
+            "primary-fixed-dim": "#a5cfc5",
+            "surface-container": "#f2ede8",
+            "outline": "#717976",
+            "secondary-fixed": "#ffe088",
+            "primary-container": "#08342d",
+            "on-surface": "#1d1b19",
+            "primary": "#001e19",
+            "tertiary-container": "#3d2a00",
+            "on-tertiary-container": "#b3904a",
+            "surface-container-high": "#ece7e2",
+            "on-tertiary": "#ffffff",
+            "inverse-primary": "#a5cfc5",
+            "surface-tint": "#3e665d",
+            "tertiary": "#231700",
+            "error": "#ba1a1a",
+            "error-container": "#ffdad6",
+            "surface-container-highest": "#e6e2dd",
+            "tertiary-fixed": "#ffdea5",
+            "on-error-container": "#93000a",
+            "secondary-fixed-dim": "#e9c349",
+            "on-primary": "#ffffff",
+            "on-primary-fixed": "#00201b",
+            "on-primary-container": "#759d94",
+            "surface": "#fef8f3",
+            "surface-variant": "#e6e2dd",
+            "background": "#fef8f3",
+            "surface-dim": "#ded9d4",
+            "surface-container-low": "#f8f3ee",
+            "on-secondary-fixed": "#241a00",
+            "secondary-container": "#fed65b",
+            "on-secondary-container": "#745c00",
+            "on-tertiary-fixed-variant": "#5d4201",
+            "on-secondary": "#ffffff",
+            "surface-bright": "#fef8f3",
+            "tertiary-fixed-dim": "#e9c176",
+            "on-tertiary-fixed": "#261900",
+            "outline-variant": "#c0c8c5",
+            "surface-container-lowest": "#ffffff",
+            "secondary": "#735c00",
+            "on-primary-fixed-variant": "#264e46"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.125rem",
+            "lg": "0.25rem",
+            "xl": "0.5rem",
+            "full": "0.75rem"
+          },
+          "spacing": {
+            "margin": "3rem",
+            "gutter": "1.5rem",
+            "space-lg": "1.5rem",
+            "space-xl": "2.5rem",
+            "margin-mobile": "1.25rem",
+            "space-xs": "0.25rem",
+            "space-sm": "0.5rem",
+            "gutter-mobile": "1rem",
+            "space-md": "1rem"
+          },
+          "fontFamily": {
+            "body-md": ["Plus Jakarta Sans"],
+            "body-sm": ["Plus Jakarta Sans"],
+            "display-lg-mobile": ["Playfair Display"],
+            "headline-md": ["Playfair Display"],
+            "headline-lg": ["Playfair Display"],
+            "headline-lg-mobile": ["Playfair Display"],
+            "label-sm": ["Plus Jakarta Sans"],
+            "title-lg": ["Plus Jakarta Sans"],
+            "label-lg": ["Plus Jakarta Sans"],
+            "body-lg": ["Plus Jakarta Sans"],
+            "title-md": ["Plus Jakarta Sans"],
+            "display-lg": ["Playfair Display"],
+            "montserrat": ["Montserrat", "sans-serif"],
+            "rossce": ["Rossce", "serif"],
+            "rolend": ["Rolend", "serif"],
+            "vireon": ["Vireon", "sans-serif"],
+            "windels": ["Windels", "serif"],
+            "haggia": ["Haggia", "serif"]
+          },
+          "fontSize": {
+            "body-md": ["15px", { "lineHeight": "22px", "fontWeight": "400" }],
+            "body-sm": ["13px", { "lineHeight": "18px", "fontWeight": "400" }],
+            "display-lg-mobile": ["34px", { "lineHeight": "42px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+            "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "500" }],
+            "headline-lg": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.01em", "fontWeight": "500" }],
+            "headline-lg-mobile": ["26px", { "lineHeight": "34px", "fontWeight": "500" }],
+            "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.1em", "fontWeight": "600" }],
+            "title-lg": ["20px", { "lineHeight": "28px", "fontWeight": "600" }],
+            "label-lg": ["13px", { "lineHeight": "18px", "letterSpacing": "0.08em", "fontWeight": "600" }],
+            "body-lg": ["17px", { "lineHeight": "26px", "fontWeight": "400" }],
+            "title-md": ["16px", { "lineHeight": "24px", "fontWeight": "600" }],
+            "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "600" }]
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="assets/css/custom.css">
+</head>
+<body class="bg-background text-on-surface antialiased selection:bg-secondary-fixed selection:text-primary font-body-md text-body-md overflow-x-clip">
+  <!-- ========================================================================= -->
+  <!-- 1. HEADER / NAVIGATION BAR (Floating Capsule Navbar)                      -->
+  <!-- ========================================================================= -->
+  <header id="mainNavbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+    <div id="mainNavbarBand" class="bg-transparent transition-all duration-300">
+      <div class="max-w-7xl mx-auto px-6 md:px-12 flex justify-between items-center h-20">
+        <!-- Brand Logo Left -->
+        <a aria-label="Brothers Nails &amp; Lashes Home" class="flex items-center gap-3 group focus:outline-none" href="index.html">
+          <img alt="Brothers Nails &amp; Lashes" class="h-10 md:h-14 w-auto object-contain brightness-110 drop-shadow-[0_2px_8px_rgba(0,18,15,0.5)] transition-transform duration-300 group-hover:scale-105" src="assets/images/brand/horizontal-logo-transparent.png">
+        </a>
+        <!-- Centered Pill Capsule Nav Links (Active: Home) -->
+        <nav id="desktopNavCapsule" class="hidden md:flex items-center gap-1 bg-[#2b5e53]/65 backdrop-blur-md border border-white/15 px-2 py-1.5 rounded-[9999px] shadow-[0_8px_28px_rgba(0,18,15,0.35)] font-label-lg text-[13px] font-normal tracking-wider">
+          <a class="nav-pill-tab px-5 py-2 rounded-[9999px] bg-primary text-[#f5c84c] font-normal shadow-md transition-all duration-200 transform hover:-translate-y-0.5 hover:scale-105" href="index.html">Home</a>
+          <a class="nav-pill-tab px-5 py-2 rounded-[9999px] text-[#ffe088] hover:text-[#f5c84c] hover:bg-primary/40 font-normal transition-all duration-200 transform hover:-translate-y-0.5 hover:scale-105" href="about.html">About</a>
+          <a class="nav-pill-tab px-5 py-2 rounded-[9999px] text-[#ffe088] hover:text-[#f5c84c] hover:bg-primary/40 font-normal transition-all duration-200 transform hover:-translate-y-0.5 hover:scale-105" href="services.html">Services</a>
+          <a class="nav-pill-tab px-5 py-2 rounded-[9999px] text-[#ffe088] hover:text-[#f5c84c] hover:bg-primary/40 font-normal transition-all duration-200 transform hover:-translate-y-0.5 hover:scale-105" href="gallery.html">Gallery</a>
+          <a class="nav-pill-tab px-5 py-2 rounded-[9999px] text-[#ffe088] hover:text-[#f5c84c] hover:bg-primary/40 font-normal transition-all duration-200 transform hover:-translate-y-0.5 hover:scale-105" href="contact.html">Contact</a>
+        </nav>
+        <!-- Right Action CTA (Pill with Circular Arrow Badge, no search icon) -->
+        <div class="flex items-center gap-4">
+          <a class="hero-cta-primary gold-shimmer text-primary font-montserrat text-xs pl-[18px] pr-1.5 py-1.5 rounded-[9999px] shadow-md flex items-center gap-2.5 group" href="https://book.gocheckin.net/v3/nails/brothers-nails-and-lashes-20136/choose-service" target="_blank" rel="noopener noreferrer">
+            <span class="font-bold tracking-wider">BOOK NOW</span>
+            <span class="w-[26px] h-[26px] rounded-[9999px] bg-primary text-secondary-fixed flex items-center justify-center transition-transform duration-300 group-hover:translate-x-0.5">
+              <span class="material-symbols-outlined text-[13px]">arrow_forward</span>
+            </span>
+          </a>
+          <!-- Mobile Menu Toggle Button -->
+          <button aria-label="Toggle Navigation Menu" class="md:hidden p-2 text-secondary-fixed focus:outline-none" id="mobileMenuBtn">
+            <span class="material-symbols-outlined text-2xl" data-icon="menu">menu</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div class="hidden md:hidden bg-primary-container/95 backdrop-blur-md shadow-[0_12px_32px_rgba(0,18,15,0.5)] px-6 py-6 transition-all" id="mobileMenu">
+      <div class="flex flex-col space-y-4 font-label-lg text-[13px] font-normal">
+        <a class="text-[#d4a024] font-normal py-1" href="index.html">Home</a>
+        <a class="text-[#ffe088] hover:text-[#d4a024] font-normal py-1" href="about.html">About</a>
+        <a class="text-[#ffe088] hover:text-[#d4a024] font-normal py-1" href="services.html">Services</a>
+        <a class="text-[#ffe088] hover:text-[#d4a024] font-normal py-1" href="gallery.html">Gallery</a>
+        <a class="text-[#ffe088] hover:text-[#d4a024] font-normal py-1" href="contact.html">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ========================================================================= -->
+    <!-- 2. HERO SECTION (SCROLL-SCRUBBING 3D / VIDEO SEQUENCE)                    -->
+    <!-- ========================================================================= -->
+    <section class="relative h-[400vh] bg-primary" id="home">
+      <div class="sticky top-0 h-screen w-full overflow-hidden bg-primary">
+        <!-- Scroll-Driven Frame Sequence Canvas -->
+        <canvas id="heroScrollCanvas" class="absolute inset-0 w-full h-full block z-0"></canvas>
+
+        <!-- Foreground Hand Overlay Canvas (Same color space as heroScrollCanvas, sits at z-20 above Title z-10) -->
+        <canvas id="heroHandOverlayCanvas" class="absolute inset-0 w-full h-full block z-20 pointer-events-none"></canvas>
+
+        <!-- Stage 1 Content: Initial Hero Headline & CTAs (0% - 42% Scroll) -->
+        <div id="heroStage1" class="relative z-10 max-w-7xl mx-auto px-6 md:px-12 h-full pb-6 md:pb-10 flex items-center will-change-transform">
+          <div class="max-w-4xl space-y-6 text-left">
+            <h1 class="font-haggia text-4xl sm:text-5xl md:text-[62px] lg:text-[68px] text-surface font-normal tracking-tight leading-[1.12] drop-shadow-md">
+              <span class="md:whitespace-nowrap">Elegance <span class="italic font-normal text-[#f5d076]">Redefined</span></span>
+              <span class="block">by BROTHERS</span>
+            </h1>
+            <p class="font-body-lg text-lg md:text-xl text-surface-container-high/90 max-w-md leading-relaxed drop-shadow">
+              Bespoke nail artistry and master lash extensions in the heart of La Quinta
+            </p>
+            <div class="relative z-30 flex flex-wrap items-center gap-3.5 pt-2 pointer-events-auto">
+              <a class="hero-cta-primary gold-shimmer text-primary-container font-body-md text-sm px-6 py-2.5 rounded-[9999px] font-semibold shadow-md flex items-center justify-center gap-2 group cursor-pointer" href="https://book.gocheckin.net/v3/nails/brothers-nails-and-lashes-20136/choose-service" target="_blank" rel="noopener noreferrer">
+                <span>Book Appointment</span>
+                <span class="material-symbols-outlined text-base transition-transform duration-300 group-hover:translate-x-1">arrow_forward</span>
+              </a>
+              <a class="hero-cta-secondary px-7 py-2.5 rounded-[9999px] font-body-md text-sm font-semibold text-primary-container bg-[#fef8f3] border border-primary-container/60 shadow-sm flex items-center justify-center cursor-pointer" href="services.html">
+                <span>Explore Services</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Stage 2: About Summary (40% - 75% Scroll, Borderless Left Layout) -->
+        <div id="heroStage2" class="pointer-events-none invisible opacity-0 translate-y-6 absolute inset-0 z-30 max-w-7xl mx-auto px-6 md:px-12 pb-6 md:pb-10 flex items-center will-change-transform">
+          <div class="max-w-2xl space-y-6 text-left">
+            <div class="space-y-3">
+              <span class="font-label-sm text-[13px] text-[#f5d076] tracking-[0.2em] uppercase font-semibold block drop-shadow">OUR STORY</span>
+              <h2 class="font-haggia text-4xl sm:text-5xl md:text-[54px] lg:text-[58px] text-surface font-normal tracking-tight leading-none drop-shadow-md">
+                <span class="block md:whitespace-nowrap">A Touch of <span class="italic text-[#f5d076]">Beauty</span></span>
+                <span class="block md:whitespace-nowrap pl-20 sm:pl-28 md:pl-36 mt-[8px]">A Moment for <span class="italic text-[#f5d076] -ml-2 inline-block">You</span></span>
+              </h2>
+            </div>
+            <p class="font-body-md text-sm md:text-[17px] leading-[1.75] md:leading-[1.8] text-surface-container-high/90 max-w-lg drop-shadow">
+              At BROTHERS Nails &amp; Lashes, we believe everyone deserves to look and feel their best. From beautiful nails and lashes to relaxing treatments, we bring care and attention to every detail
+            </p>
+            <div class="flex flex-wrap items-center gap-3 pt-1 text-surface text-xs md:text-[13px] font-medium tracking-wide drop-shadow">
+              <span class="inline-block cursor-default transition-all duration-200 transform hover:text-[#f5d076] hover:-translate-y-0.5 hover:scale-105 hover:drop-shadow-[0_2px_8px_rgba(245,208,118,0.45)]">Personalized Care</span>
+              <span class="text-[#f5d076]">&bull;</span>
+              <span class="inline-block cursor-default transition-all duration-200 transform hover:text-[#f5d076] hover:-translate-y-0.5 hover:scale-105 hover:drop-shadow-[0_2px_8px_rgba(245,208,118,0.45)]">Beautiful Nail Art</span>
+              <span class="text-[#f5d076]">&bull;</span>
+              <span class="inline-block cursor-default transition-all duration-200 transform hover:text-[#f5d076] hover:-translate-y-0.5 hover:scale-105 hover:drop-shadow-[0_2px_8px_rgba(245,208,118,0.45)]">Relaxing Experience</span>
+            </div>
+            <div class="pt-2">
+              <a class="hero-cta-primary gold-shimmer text-primary-container font-body-md text-sm px-6 py-2.5 rounded-[9999px] font-semibold shadow-md inline-flex items-center justify-center gap-2 group cursor-pointer" href="about.html">
+                <span>Discover Our Story</span>
+                <span class="material-symbols-outlined text-base transition-transform duration-300 group-hover:translate-x-1">arrow_forward</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bottom Scroll Progress Indicator -->
+        <div id="heroScrollIndicator" class="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center gap-2 pointer-events-none transition-opacity duration-300">
+          <span id="heroScrollLabel" class="font-label-sm text-[10px] tracking-[0.2em] uppercase text-secondary-fixed/85 drop-shadow">Scroll</span>
+          <div class="w-36 h-1 rounded-full bg-surface/20 overflow-hidden backdrop-blur-sm">
+            <div id="heroScrollProgress" class="h-full bg-secondary-fixed rounded-full transition-none" style="width: 0%"></div>
+          </div>
+        </div>
+
+        <!-- Soft Feathered Mist Transition into Bright White Signature Services Section -->
+        <div id="heroBottomFeather" class="absolute inset-x-0 bottom-0 h-36 md:h-52 pointer-events-none z-20" style="background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,0.18) 30%, rgba(255,255,255,0.58) 65%, rgba(255,255,255,0.9) 88%, #ffffff 100%); opacity: 0;"></div>
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- 4. SERVICES SECTION (BRIGHT WHITE CONCEPT, SCROLL HORIZONTAL RIGHT->LEFT) -->
+    <!-- ========================================================================= -->
+    <section class="relative z-20 -mt-16 h-[280vh] bg-gradient-to-b from-transparent via-[#fef8f3] to-[#f8f3ee]" id="services">
+      <div class="sticky top-0 h-screen w-full overflow-hidden flex flex-col justify-between pt-24 md:pt-28 pb-4 md:pb-6" style="background: linear-gradient(to bottom, rgba(255,255,255,0) 0px, rgba(255,255,255,0.82) 48px, #ffffff 110px, #fef8f3 60%, #f8f3ee 100%);">
+        <!-- Soft Light Ambient Glows -->
+        <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-secondary-fixed/20 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute bottom-10 right-1/4 w-96 h-96 bg-primary-fixed/25 rounded-full blur-3xl pointer-events-none"></div>
+
+        <!-- Section Header -->
+        <div class="max-w-7xl mx-auto px-6 md:px-12 w-full text-center space-y-1.5 relative z-10 shrink-0">
+          <span class="font-label-sm text-[12px] text-secondary tracking-[0.22em] uppercase font-semibold block"> OUR SIGNATURE SERVICES</span>
+          <h2 class="font-haggia text-3xl sm:text-4xl md:text-[44px] text-primary font-normal tracking-tight leading-tight">
+            Curated Services <span class="italic text-[#c59b38]">Tailored</span> to You
+          </h2>
+        </div>
+
+        <!-- Centered Spotlight Carousel Viewport (Slides Right -> Left on Scroll) -->
+        <div class="relative w-full flex-1 flex items-center justify-center min-h-0">
+          <div id="servicesHorizontalTrack" class="relative w-full max-w-[1060px] mx-auto h-full min-h-[360px] sm:min-h-[385px] md:min-h-[400px] overflow-x-clip overflow-y-visible">
+            <!-- Service Card 1: Manicure & Pedicure -->
+            <article class="service-slide-card is-active group w-[260px] sm:w-[290px] md:w-[310px] rounded-3xl p-4 md:p-5 flex flex-col justify-between cursor-pointer">
+              <div>
+                <div class="relative h-44 sm:h-48 md:h-52 rounded-2xl overflow-hidden mb-3.5 shadow-sm border border-outline-variant/20">
+                  <img src="assets/images/home/signature-service/mani_pedi.png" alt="Manicure &amp; Pedicure" class="service-card-img w-full h-full object-cover object-center">
+                </div>
+                <h3 class="font-headline-md text-xl md:text-2xl text-primary font-normal leading-snug">Manicure &amp; Pedicure</h3>
+                <div class="service-card-divider h-[2px] bg-[#c59b38] my-2"></div>
+                <p class="service-card-desc font-body-sm text-[13px] text-on-surface-variant leading-snug">
+                  Glossy nails &amp; Relaxed feet
+                </p>
+              </div>
+              <div class="mt-3.5 pt-0.5 flex items-center justify-start">
+                <a href="services.html#mani-pedi" class="service-card-cta text-[11px] font-montserrat font-bold tracking-wider uppercase px-4 py-2 rounded-lg inline-flex items-center gap-1.5">
+                  <span>Explore</span>
+                  <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                </a>
+              </div>
+            </article>
+
+            <!-- Service Card 2: Nail Extensions & Full Sets -->
+            <article class="service-slide-card group w-[260px] sm:w-[290px] md:w-[310px] rounded-3xl p-4 md:p-5 flex flex-col justify-between cursor-pointer">
+              <div>
+                <div class="relative h-44 sm:h-48 md:h-52 rounded-2xl overflow-hidden mb-3.5 shadow-sm border border-outline-variant/20">
+                  <img src="assets/images/home/signature-service/nail_set.png" alt="Nail Extensions &amp; Full Sets" class="service-card-img w-full h-full object-cover object-center">
+                </div>
+                <h3 class="font-headline-md text-xl md:text-2xl text-primary font-normal leading-snug">Nail Sets</h3>
+                <div class="service-card-divider h-[2px] bg-[#c59b38] my-2"></div>
+                <p class="service-card-desc font-body-sm text-[13px] text-on-surface-variant leading-snug">
+                  Natural-looking strength, custom shape &amp; Clean finish
+                </p>
+              </div>
+              <div class="mt-3.5 pt-0.5 flex items-center justify-start">
+                <a href="services.html#full-sets" class="service-card-cta text-[11px] font-montserrat font-bold tracking-wider uppercase px-4 py-2 rounded-lg inline-flex items-center gap-1.5">
+                  <span>Explore</span>
+                  <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                </a>
+              </div>
+            </article>
+
+            <!-- Service Card 3: Eyelash Extensions & Lash Lift -->
+            <article class="service-slide-card group w-[260px] sm:w-[290px] md:w-[310px] rounded-3xl p-4 md:p-5 flex flex-col justify-between cursor-pointer">
+              <div>
+                <div class="relative h-44 sm:h-48 md:h-52 rounded-2xl overflow-hidden mb-3.5 shadow-sm border border-outline-variant/20">
+                  <img src="assets/images/home/signature-service/lash.png" alt="Eyelash Extensions &amp; Lash Lift" class="service-card-img w-full h-full object-cover object-center">
+                </div>
+                <h3 class="font-headline-md text-xl md:text-2xl text-primary font-normal leading-snug">Lash Treatments</h3>
+                <div class="service-card-divider h-[2px] bg-[#c59b38] my-2"></div>
+                <p class="service-card-desc font-body-sm text-[13px] text-on-surface-variant leading-snug">
+                  Natural to full volume lashes tailored to your eyes
+                </p>
+              </div>
+              <div class="mt-3.5 pt-0.5 flex items-center justify-start">
+                <a href="services.html#brow-lash" class="service-card-cta text-[11px] font-montserrat font-bold tracking-wider uppercase px-4 py-2 rounded-lg inline-flex items-center gap-1.5">
+                  <span>Explore</span>
+                  <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                </a>
+              </div>
+            </article>
+
+            <!-- Service Card 4: Custom Nail Art & Chrome -->
+            <article class="service-slide-card group w-[260px] sm:w-[290px] md:w-[310px] rounded-3xl p-4 md:p-5 flex flex-col justify-between cursor-pointer">
+              <div>
+                <div class="relative h-44 sm:h-48 md:h-52 rounded-2xl overflow-hidden mb-3.5 shadow-sm border border-outline-variant/20">
+                  <img src="assets/images/home/signature-service/nail_art.png" alt="Custom Nail Art &amp; Finishes" class="service-card-img w-full h-full object-cover object-center">
+                </div>
+                <h3 class="font-headline-md text-xl md:text-2xl text-primary font-normal leading-snug">Custom Nail Art</h3>
+                <div class="service-card-divider h-[2px] bg-[#c59b38] my-2"></div>
+                <p class="service-card-desc font-body-sm text-[13px] text-on-surface-variant leading-snug">
+                  Personal detail &amp; dimensional shine tailored to your style
+                </p>
+              </div>
+              <div class="mt-3.5 pt-0.5 flex items-center justify-start">
+                <a href="services.html#additional-services" class="service-card-cta text-[11px] font-montserrat font-bold tracking-wider uppercase px-4 py-2 rounded-lg inline-flex items-center gap-1.5">
+                  <span>Explore</span>
+                  <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                </a>
+              </div>
+            </article>
+
+            <!-- Service Card 5: Brow Architecture & Waxing -->
+            <article class="service-slide-card group w-[260px] sm:w-[290px] md:w-[310px] rounded-3xl p-4 md:p-5 flex flex-col justify-between cursor-pointer">
+              <div>
+                <div class="relative h-44 sm:h-48 md:h-52 rounded-2xl overflow-hidden mb-3.5 shadow-sm border border-outline-variant/20">
+                  <img src="assets/images/home/signature-service/brow.png" alt="Brow &amp; Waxing" class="service-card-img w-full h-full object-cover object-center">
+                </div>
+                <h3 class="font-headline-md text-xl md:text-2xl text-primary font-normal leading-snug">Brow &amp; Waxing</h3>
+                <div class="service-card-divider h-[2px] bg-[#c59b38] my-2"></div>
+                <p class="service-card-desc font-body-sm text-[13px] text-on-surface-variant leading-snug">
+                  Clean brow lines &amp; silky skin with minimal redness
+                </p>
+              </div>
+              <div class="mt-3.5 pt-0.5 flex items-center justify-start">
+                <a href="services.html#waxing" class="service-card-cta text-[11px] font-montserrat font-bold tracking-wider uppercase px-4 py-2 rounded-lg inline-flex items-center gap-1.5">
+                  <span>Explore</span>
+                  <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                </a>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <!-- Bottom Navigation Controls (Previous / Progress Dashes / View Full Menu / Next) -->
+        <div class="max-w-7xl mx-auto px-6 md:px-12 w-full flex flex-col sm:flex-row items-center justify-between gap-3 relative z-20 shrink-0">
+          <button id="servicesPrevBtn" type="button" class="gold-shimmer text-primary font-montserrat text-[11px] font-bold uppercase tracking-wider rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-all duration-200 flex items-center">
+            <span class="px-2.5 py-2 border-r border-primary/20 flex items-center justify-center">
+              <span class="material-symbols-outlined text-xs">arrow_left</span>
+            </span>
+            <span class="px-4 py-2">Previous</span>
+          </button>
+
+          <div class="flex flex-col items-center gap-2">
+            <div id="servicesProgressDots" class="flex items-center gap-2.5">
+              <button type="button" data-service-dot="0" class="h-1.5 w-10 rounded-full bg-[#c59b38] transition-all duration-300" aria-label="Service 1"></button>
+              <button type="button" data-service-dot="1" class="h-1.5 w-10 rounded-full bg-primary/15 transition-all duration-300" aria-label="Service 2"></button>
+              <button type="button" data-service-dot="2" class="h-1.5 w-10 rounded-full bg-primary/15 transition-all duration-300" aria-label="Service 3"></button>
+              <button type="button" data-service-dot="3" class="h-1.5 w-10 rounded-full bg-primary/15 transition-all duration-300" aria-label="Service 4"></button>
+              <button type="button" data-service-dot="4" class="h-1.5 w-10 rounded-full bg-primary/15 transition-all duration-300" aria-label="Service 5"></button>
+            </div>
+            <a href="services.html" class="font-montserrat text-xs font-semibold uppercase tracking-widest text-primary hover:text-secondary transition-colors inline-flex items-center gap-1.5">
+              <span>View Full Menu </span>
+              <span class="material-symbols-outlined text-sm">arrow_forward</span>
+            </a>
+          </div>
+
+          <button id="servicesNextBtn" type="button" class="gold-shimmer text-primary font-montserrat text-[11px] font-bold uppercase tracking-wider rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-all duration-200 flex items-center">
+            <span class="px-4 py-2">Next</span>
+            <span class="px-2.5 py-2 border-l border-primary/20 flex items-center justify-center">
+              <span class="material-symbols-outlined text-xs">arrow_right</span>
+            </span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- 5. GALLERY SECTION (SUMMARY)                                              -->
+    <!-- ========================================================================= -->
+    <section class="relative z-10 h-[280vh] bg-[#f3eee5] border-t border-outline-variant/30" id="gallery">
+      <div class="sticky top-0 h-screen w-full overflow-hidden flex flex-col lg:grid lg:grid-cols-12">
+        <!-- Left Full-Screen Column: Deep Emerald Heading + Frosted Pill Stream + CTA -->
+        <div class="lg:col-span-5 lg:h-full relative flex flex-col justify-between bg-gradient-to-b from-[#08342d] via-[#062923] to-[#001e19] pt-24 lg:pt-28 pb-3 lg:pb-5 px-6 lg:px-10 overflow-hidden shrink-0">
+          <div class="absolute -top-24 -left-24 w-72 h-72 bg-secondary-fixed/15 rounded-[9999px] blur-3xl pointer-events-none"></div>
+          <div class="absolute -bottom-24 -right-24 w-72 h-72 bg-[#3e665d]/25 rounded-[9999px] blur-3xl pointer-events-none"></div>
+
+          <!-- Editorial Header -->
+          <div class="text-center max-w-lg mx-auto space-y-1.5 relative z-10 shrink-0">
+            <span class="font-label-sm text-[11px] md:text-[12px] text-[#ffe088] tracking-[0.22em] uppercase font-semibold block">OUR MASTERPIECES</span>
+            <h2 class="font-haggia text-3xl sm:text-4xl lg:text-[44px] xl:text-[48px] text-white font-normal tracking-tight leading-tight">
+              Moments of Glamour
+            </h2>
+            <p class="hidden sm:block font-body-sm text-surface-container-high/75 leading-relaxed">
+              A glimpse into the bespoke works created daily at
+              <span class="block">BROTHERS Nails &amp; Lashes</span>
+            </p>
+          </div>
+
+          <!-- Vertical (Desktop) / Horizontal (Mobile) Frosted Pill Stream -->
+          <div id="galleryPillViewport" class="relative w-full h-[54px] sm:h-[62px] lg:flex-1 lg:min-h-[220px] lg:my-2 equator-pill-mask overflow-hidden z-10">
+            <button type="button" data-equator-pill="0" class="equator-pill is-active rounded-[9999px] px-6 py-2.5 text-[11px] font-montserrat font-bold tracking-[0.14em] uppercase inline-flex items-center justify-center cursor-pointer">
+              <span>Pearl French</span>
+            </button>
+            <button type="button" data-equator-pill="1" class="equator-pill rounded-[9999px] px-6 py-2.5 text-[11px] font-montserrat font-bold tracking-[0.14em] uppercase inline-flex items-center justify-center cursor-pointer">
+              <span>Abstract Swirl</span>
+            </button>
+            <button type="button" data-equator-pill="2" class="equator-pill rounded-[9999px] px-6 py-2.5 text-[11px] font-montserrat font-bold tracking-[0.14em] uppercase inline-flex items-center justify-center cursor-pointer">
+              <span>Blush 3D Art</span>
+            </button>
+            <button type="button" data-equator-pill="3" class="equator-pill rounded-[9999px] px-6 py-2.5 text-[11px] font-montserrat font-bold tracking-[0.14em] uppercase inline-flex items-center justify-center cursor-pointer">
+              <span>Pearl &amp; Bow</span>
+            </button>
+            <button type="button" data-equator-pill="4" class="equator-pill rounded-[9999px] px-6 py-2.5 text-[11px] font-montserrat font-bold tracking-[0.14em] uppercase inline-flex items-center justify-center cursor-pointer">
+              <span>Ombre</span>
+            </button>
+            <button type="button" data-equator-pill="5" class="equator-pill rounded-[9999px] px-6 py-2.5 text-[11px] font-montserrat font-bold tracking-[0.14em] uppercase inline-flex items-center justify-center cursor-pointer">
+              <span>Character Art</span>
+            </button>
+          </div>
+
+          <!-- Desktop Gallery CTA -->
+          <div class="hidden lg:flex justify-center relative z-10 shrink-0">
+            <a class="group inline-flex items-center gap-2.5 px-7 py-2.5 rounded-[9999px] bg-white/10 hover:bg-white border border-[#ffe088]/45 text-white hover:text-primary font-montserrat text-xs font-semibold uppercase tracking-wider transition-all duration-300 shadow-sm hover:shadow-md" href="gallery.html">
+              <span>Explore Gallery</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right Full-Screen Column: Warm Sand Shuffling Deck Canvas -->
+        <div class="lg:col-span-7 relative flex-1 lg:h-full bg-[#f3eee5] overflow-hidden flex flex-col justify-between pt-2 lg:pt-16 pb-4 lg:pb-5">
+          <div id="galleryDeckStage" class="relative w-full flex-1 min-h-0 cursor-grab active:cursor-grabbing select-none touch-pan-y">
+            <!-- Card 0: Pearl French & 3D Floral -->
+            <article data-equator-card="0" class="equator-deck-card w-[245px] sm:w-[300px] md:w-[350px] lg:w-[400px] xl:w-[445px] h-[300px] sm:h-[370px] md:h-[430px] lg:h-[480px] xl:h-[520px] max-h-[72vh] rounded-[26px] overflow-hidden bg-primary border border-white/30">
+              <img class="w-full h-full object-cover object-center pointer-events-none" alt="Pearl French &amp; 3D Floral" src="assets/images/home/masterpieces/pearl_french_3d_floral.jpg">
+              <div class="absolute inset-0 bg-gradient-to-b from-[#001e19]/65 via-transparent to-transparent pointer-events-none"></div>
+              <div class="absolute top-5 left-6 right-6 pointer-events-none">
+                <span class="text-[9px] md:text-[10px] tracking-[0.2em] uppercase text-[#ffe088] font-montserrat font-semibold block">Pearl Chrome &amp; 3D Art</span>
+                <h3 class="font-haggia text-lg sm:text-xl md:text-2xl xl:text-[28px] text-white font-normal leading-tight mt-0.5 drop-shadow">Pearl French &amp; 3D Floral</h3>
+              </div>
+            </article>
+
+            <!-- Card 1: Monochrome Swirl -->
+            <article data-equator-card="1" class="equator-deck-card w-[245px] sm:w-[300px] md:w-[350px] lg:w-[400px] xl:w-[445px] h-[300px] sm:h-[370px] md:h-[430px] lg:h-[480px] xl:h-[520px] max-h-[72vh] rounded-[26px] overflow-hidden bg-primary border border-white/30">
+              <img class="w-full h-full object-cover object-center pointer-events-none" alt="Monochrome Swirl" src="assets/images/home/masterpieces/monochrome_swirl.jpg">
+              <div class="absolute inset-0 bg-gradient-to-b from-[#001e19]/65 via-transparent to-transparent pointer-events-none"></div>
+              <div class="absolute top-5 left-6 right-6 pointer-events-none">
+                <span class="text-[9px] md:text-[10px] tracking-[0.2em] uppercase text-[#ffe088] font-montserrat font-semibold block">Abstract Line Art</span>
+                <h3 class="font-haggia text-lg sm:text-xl md:text-2xl xl:text-[28px] text-white font-normal leading-tight mt-0.5 drop-shadow">Monochrome Swirl</h3>
+              </div>
+            </article>
+
+            <!-- Card 2: Blush 3D Blossom French -->
+            <article data-equator-card="2" class="equator-deck-card w-[245px] sm:w-[300px] md:w-[350px] lg:w-[400px] xl:w-[445px] h-[300px] sm:h-[370px] md:h-[430px] lg:h-[480px] xl:h-[520px] max-h-[72vh] rounded-[26px] overflow-hidden bg-primary border border-white/30">
+              <img class="w-full h-full object-cover object-center pointer-events-none" alt="Blush 3D Blossom French" src="assets/images/home/masterpieces/blush_3d_blossom_french.jpg">
+              <div class="absolute inset-0 bg-gradient-to-b from-[#001e19]/65 via-transparent to-transparent pointer-events-none"></div>
+              <div class="absolute top-5 left-6 right-6 pointer-events-none">
+                <span class="text-[9px] md:text-[10px] tracking-[0.2em] uppercase text-[#ffe088] font-montserrat font-semibold block">Airbrush Pink &amp; 3D Floral</span>
+                <h3 class="font-haggia text-lg sm:text-xl md:text-2xl xl:text-[28px] text-white font-normal leading-tight mt-0.5 drop-shadow">Blush 3D Blossom French</h3>
+              </div>
+            </article>
+
+            <!-- Card 3: Pearl, Bow & Gold Luxury -->
+            <article data-equator-card="3" class="equator-deck-card w-[245px] sm:w-[300px] md:w-[350px] lg:w-[400px] xl:w-[445px] h-[300px] sm:h-[370px] md:h-[430px] lg:h-[480px] xl:h-[520px] max-h-[72vh] rounded-[26px] overflow-hidden bg-primary border border-white/30">
+              <img class="w-full h-full object-cover object-center pointer-events-none" alt="Pearl, Bow &amp; Gold Luxury" src="assets/images/home/masterpieces/pearl_bow_gold_luxury.jpg">
+              <div class="absolute inset-0 bg-gradient-to-b from-[#001e19]/65 via-transparent to-transparent pointer-events-none"></div>
+              <div class="absolute top-5 left-6 right-6 pointer-events-none">
+                <span class="text-[9px] md:text-[10px] tracking-[0.2em] uppercase text-[#ffe088] font-montserrat font-semibold block">3D Charms &amp; Glitter</span>
+                <h3 class="font-haggia text-lg sm:text-xl md:text-2xl xl:text-[28px] text-white font-normal leading-tight mt-0.5 drop-shadow">Pearl, Bow &amp; Gold Luxury</h3>
+              </div>
+            </article>
+
+            <!-- Card 4: Pink & White Ombre XL -->
+            <article data-equator-card="4" class="equator-deck-card w-[245px] sm:w-[300px] md:w-[350px] lg:w-[400px] xl:w-[445px] h-[300px] sm:h-[370px] md:h-[430px] lg:h-[480px] xl:h-[520px] max-h-[72vh] rounded-[26px] overflow-hidden bg-primary border border-white/30">
+              <img class="w-full h-full object-cover object-center pointer-events-none" alt="Pink &amp; White Ombre" src="assets/images/home/masterpieces/pink_white_ombre_xl.jpg">
+              <div class="absolute inset-0 bg-gradient-to-b from-[#001e19]/65 via-transparent to-transparent pointer-events-none"></div>
+              <div class="absolute top-5 left-6 right-6 pointer-events-none">
+                <span class="text-[9px] md:text-[10px] tracking-[0.2em] uppercase text-[#ffe088] font-montserrat font-semibold block">Extra-Long Sculpted Set</span>
+                <h3 class="font-haggia text-lg sm:text-xl md:text-2xl xl:text-[28px] text-white font-normal leading-tight mt-0.5 drop-shadow">Pink &amp; White Ombre</h3>
+              </div>
+            </article>
+
+            <!-- Card 5: Crimson Ghostface Art -->
+            <article data-equator-card="5" class="equator-deck-card w-[245px] sm:w-[300px] md:w-[350px] lg:w-[400px] xl:w-[445px] h-[300px] sm:h-[370px] md:h-[430px] lg:h-[480px] xl:h-[520px] max-h-[72vh] rounded-[26px] overflow-hidden bg-primary border border-white/30">
+              <img class="w-full h-full object-cover object-center pointer-events-none" alt="Crimson Ghostface Art" src="assets/images/home/masterpieces/crimson_ghostface_art.jpg">
+              <div class="absolute inset-0 bg-gradient-to-b from-[#001e19]/65 via-transparent to-transparent pointer-events-none"></div>
+              <div class="absolute top-5 left-6 right-6 pointer-events-none">
+                <span class="text-[9px] md:text-[10px] tracking-[0.2em] uppercase text-[#ffe088] font-montserrat font-semibold block">Hand-Painted Stiletto</span>
+                <h3 class="font-haggia text-lg sm:text-xl md:text-2xl xl:text-[28px] text-white font-normal leading-tight mt-0.5 drop-shadow">Crimson Ghostface Art</h3>
+              </div>
+            </article>
+          </div>
+
+          <!-- Bottom Controls -->
+          <div class="px-5 sm:px-8 lg:px-10 flex items-center justify-between lg:justify-center z-40 shrink-0">
+            <a class="lg:hidden inline-flex items-center gap-2 px-4 py-2 rounded-[9999px] bg-white border border-[#c59b38]/40 text-primary font-montserrat text-[10px] font-semibold uppercase tracking-wider shadow-sm" href="gallery.html">
+              <span>Explore Gallery</span>
+              <span class="material-symbols-outlined text-sm text-secondary">photo_library</span>
+            </a>
+            <div class="flex items-center gap-3">
+              <button id="galleryEquatorPrev" type="button" aria-label="Previous Masterpiece" class="w-9 h-9 rounded-[9999px] bg-white/95 hover:bg-white border border-primary/15 text-primary flex items-center justify-center shadow-sm transition-all duration-200 hover:scale-105">
+                <span class="material-symbols-outlined text-lg">chevron_left</span>
+              </button>
+              <button id="galleryEquatorNext" type="button" aria-label="Next Masterpiece" class="w-9 h-9 rounded-[9999px] bg-white/95 hover:bg-white border border-primary/15 text-primary flex items-center justify-center shadow-sm transition-all duration-200 hover:scale-105">
+                <span class="material-symbols-outlined text-lg">chevron_right</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- 6. CONTACT & VISIT SECTION (SUMMARY)                                      -->
+    <!-- ========================================================================= -->
+    <section class="bg-surface-container-lowest" id="contact">
+      <!-- Part 1: Full-Width Photo Banner with Centered Heading Overlay -->
+      <div id="welcomeBanner" class="relative w-full h-[320px] sm:h-[360px] md:h-[420px] overflow-hidden flex items-center justify-center bg-primary">
+        <img id="welcomeBannerBg" class="absolute inset-0 w-full h-full object-cover object-center will-change-transform" alt="Opulent modern salon in La Quinta" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAf2ImxF21mgK6gHuw26Zb9zwIf17AQdPwkJO2n_LvNYQ27Y528H1p1e31lutZwuceGPy01YmYf3qAk_d6nvVD-hBnOpkRef1g8fbnnKwQ4g8DZxla7Qe2OMrYWbMXoJtDNG9DP2d7xIL2U9OaIvx5o5oxc0nzR1LtLYc8-OMkZf0zS6_glwC3L0aSPxtk0CBGlS43QyXBeBNjIVjAkMc7lr0Pnnl6ASz1rYuUHPiw">
+        <div class="absolute inset-0 bg-gradient-to-b from-primary/70 via-primary/55 to-primary/75 pointer-events-none"></div>
+        <div class="relative z-10 max-w-3xl mx-auto px-6 text-center flex flex-col items-center">
+          <span id="welcomeAccentLine" class="block h-[2px] w-16 sm:w-20 rounded-full bg-gradient-to-r from-[#c59b38] via-[#ffe088] to-[#c59b38] shadow-[0_0_14px_rgba(255,224,136,0.5)] mb-4 sm:mb-5" aria-hidden="true"></span>
+          <h2 id="welcomeHeading" class="font-haggia text-3xl sm:text-4xl md:text-[48px] text-white font-normal tracking-tight leading-tight drop-shadow-md">
+            <span class="welcome-word inline-block" data-welcome-word="0">We</span>
+            <span class="welcome-word inline-block" data-welcome-word="1">Look</span>
+            <span class="welcome-word inline-block" data-welcome-word="2">Forward</span>
+            <span class="welcome-word inline-block" data-welcome-word="3">To</span>
+            <span class="welcome-word inline-block" data-welcome-word="4">Welcoming</span>
+            <span class="welcome-word inline-block" data-welcome-word="5">You</span>
+          </h2>
+        </div>
+      </div>
+
+      <!-- Part 2: Contact Info Block (2x2 Grid, No Message Form) -->
+      <div class="max-w-5xl mx-auto px-6 md:px-12 pt-16 pb-12 md:pt-20 md:pb-16">
+        <div id="contactInfoHeader" class="space-y-2 mb-6">
+          <div class="flex items-center gap-3 text-sm md:text-base font-montserrat font-semibold tracking-widest uppercase text-secondary">
+            <span class="w-10 h-[1.5px] bg-secondary"></span>
+            <span>Contact Info</span>
+          </div>
+        </div>
+
+        <div id="contactInfoGrid" class="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-4 -mx-4">
+          <!-- Item 1: Location -->
+          <a href="https://www.google.com/maps/search/?api=1&amp;query=78982+CA-111+Suite+1B+La+Quinta+CA+92253" target="_blank" rel="noopener noreferrer" aria-label="Open Google Maps for 78982 CA-111, Suite 1B, La Quinta, CA 92253" title="View on Google Maps" class="group flex items-start gap-4 p-4 rounded-xl border border-transparent hover:border-secondary-fixed/70 hover:bg-surface-container-low hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 cursor-pointer">
+            <span class="material-symbols-outlined text-[30px] text-primary-container group-hover:text-secondary group-hover:scale-110 shrink-0 mt-0.5 transition-all duration-300">location_on</span>
+            <div class="flex-1 min-w-0">
+              <div class="flex items-center justify-between gap-2">
+                <h4 class="font-title-md text-[17px] md:text-[18px] text-primary group-hover:text-secondary font-semibold transition-colors duration-300">Location</h4>
+                <span class="material-symbols-outlined text-lg text-secondary opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300">arrow_outward</span>
+              </div>
+              <p class="font-body-sm text-[15px] md:text-base text-on-surface-variant group-hover:text-primary mt-1.5 leading-relaxed transition-colors duration-300">
+                78982 CA-111, Suite 1B, La Quinta, CA 92253
+              </p>
+            </div>
+          </a>
+
+          <!-- Item 2: Opening Hours -->
+          <a href="https://book.gocheckin.net/v3/nails/brothers-nails-and-lashes-20136/choose-service" target="_blank" rel="noopener noreferrer" data-booking aria-label="Opening Hours — Book an appointment online" title="Book Appointment Online" class="group flex items-start gap-4 p-4 rounded-xl border border-transparent hover:border-secondary-fixed/70 hover:bg-surface-container-low hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 cursor-pointer">
+            <span class="material-symbols-outlined text-[30px] text-primary-container group-hover:text-secondary group-hover:scale-110 shrink-0 mt-0.5 transition-all duration-300">schedule</span>
+            <div class="flex-1 min-w-0">
+              <div class="flex items-center justify-between gap-2">
+                <h4 class="font-title-md text-[17px] md:text-[18px] text-primary group-hover:text-secondary font-semibold transition-colors duration-300">Opening Hours</h4>
+                <span class="material-symbols-outlined text-lg text-secondary opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300">arrow_outward</span>
+              </div>
+              <div class="font-body-sm text-[15px] md:text-base text-on-surface-variant group-hover:text-primary mt-1.5 space-y-1 leading-relaxed transition-colors duration-300">
+                <p>Mon – Sat: <span class="font-semibold text-primary">9:00 AM – 7:00 PM</span></p>
+                <p>Sunday: <span class="font-semibold text-primary">10:00 AM – 5:00 PM</span></p>
+              </div>
+            </div>
+          </a>
+
+          <!-- Item 3: Direct Concierge / Hotline -->
+          <a href="tel:7603000112" aria-label="Call +1 (760) 300-0112" title="Call +1 (760) 300-0112" class="group flex items-start gap-4 p-4 rounded-xl border border-transparent hover:border-secondary-fixed/70 hover:bg-surface-container-low hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 cursor-pointer">
+            <span class="material-symbols-outlined text-[30px] text-primary-container group-hover:text-secondary group-hover:scale-110 shrink-0 mt-0.5 transition-all duration-300">call</span>
+            <div class="flex-1 min-w-0">
+              <div class="flex items-center justify-between gap-2">
+                <h4 class="font-title-md text-[17px] md:text-[18px] text-primary group-hover:text-secondary font-semibold transition-colors duration-300">Phone</h4>
+                <span class="material-symbols-outlined text-lg text-secondary opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300">arrow_outward</span>
+              </div>
+              <p class="font-body-sm text-[15px] md:text-base text-primary group-hover:text-secondary font-semibold mt-1.5 transition-colors duration-300">
+                +1 (760) 300-0112
+              </p>
+            </div>
+          </a>
+
+          <!-- Item 4: Follow Us (Facebook & Instagram with icons) -->
+          <div class="group flex items-start gap-4 p-4 rounded-xl border border-transparent hover:border-secondary-fixed/70 hover:bg-surface-container-low hover:shadow-md hover:-translate-y-0.5 transition-all duration-300">
+            <span class="material-symbols-outlined text-[30px] text-primary-container group-hover:text-secondary group-hover:scale-110 shrink-0 mt-0.5 transition-all duration-300">link</span>
+            <div class="flex-1 min-w-0">
+              <h4 class="font-title-md text-[17px] md:text-[18px] text-primary group-hover:text-secondary font-semibold transition-colors duration-300">Follow Us</h4>
+              <div class="mt-1.5 space-y-1 font-body-sm text-[15px] md:text-base">
+                <a href="https://www.facebook.com/brothersnailslashes" target="_blank" rel="noopener noreferrer" aria-label="Facebook BROTHERS Nails &amp; Lashes" class="contact-social-link flex items-center justify-between gap-2 py-1 px-2 -mx-2 rounded-lg text-on-surface-variant hover:text-secondary hover:bg-white/90 hover:translate-x-1 font-medium transition-all duration-200">
+                  <span class="flex items-center gap-2.5 min-w-0">
+                    <svg class="social-icon w-[18px] h-[18px] text-primary-container shrink-0" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                      <path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"/>
+                    </svg>
+                    <span class="truncate">BROTHERS Nails &amp; Lashes</span>
+                  </span>
+                  <span class="social-arrow material-symbols-outlined text-base text-secondary shrink-0">arrow_outward</span>
+                </a>
+                <a href="https://www.instagram.com/brothersnailslashes" target="_blank" rel="noopener noreferrer" aria-label="Instagram @brothersnailslashes" class="contact-social-link flex items-center justify-between gap-2 py-1 px-2 -mx-2 rounded-lg text-on-surface-variant hover:text-secondary hover:bg-white/90 hover:translate-x-1 font-medium transition-all duration-200">
+                  <span class="flex items-center gap-2.5 min-w-0">
+                    <svg class="social-icon w-[18px] h-[18px] text-primary-container shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <rect width="20" height="20" x="2" y="2" rx="5" ry="5"/>
+                      <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                      <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/>
+                    </svg>
+                    <span class="truncate">@brothersnailslashes</span>
+                  </span>
+                  <span class="social-arrow material-symbols-outlined text-base text-secondary shrink-0">arrow_outward</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Part 3: Full-Width Map Section -->
+      <div class="relative w-full h-[360px] sm:h-[420px] md:h-[460px] overflow-hidden bg-surface-container border-y border-outline-variant/30">
+        <img class="absolute inset-0 w-full h-full object-cover" alt="La Quinta California location overview" data-location="La Quinta, California" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDkFOnMb19unfTGOcNVa91sdB6n7NJvCcF_ZfoGVPrRm3jXxjaemhddOS8EaZV3J_H3sZzgGjnigllINaUFG-QX4ptWNv442ZbgWfFe1YWOuYG8GtRpKl5eh5myv60tDU6utJKs2SolZKNzXPJZXBbOBUQl7UHkaZSQIwE_2Gce3g_b0n9N3pbVIgFRQvLNl3nmJ1j86G7ocqCZCa7-9DAoR7yXHXwkqPLLTcc0pzM">
+        <div class="absolute inset-0 bg-primary/10 pointer-events-none"></div>
+        <div class="relative z-10 max-w-7xl mx-auto px-6 md:px-12 pt-6 pointer-events-none">
+          <div class="pointer-events-auto inline-flex flex-wrap sm:flex-nowrap items-center justify-between gap-4 bg-white/95 backdrop-blur-md px-5 py-4 rounded-xl border border-outline-variant/40 shadow-lg max-w-md">
+            <div>
+              <div class="font-title-md text-primary font-bold">BROTHERS Nails &amp; Lashes</div>
+              <div class="font-body-sm text-on-surface-variant mt-0.5">78982 CA-111, Suite 1B, La Quinta, CA 92253</div>
+            </div>
+            <a class="gold-shimmer text-primary px-4 py-2 rounded-[9999px] font-label-sm font-semibold shadow-sm hover:shadow-md flex items-center gap-1.5 transition-transform active:scale-95 shrink-0" href="https://www.google.com/maps/search/?api=1&amp;query=78982+CA-111+Suite+1B+La+Quinta+CA+92253" rel="noopener noreferrer" target="_blank">
+              <span class="material-symbols-outlined text-sm">near_me</span>
+              <span>Directions</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Part 4: Subscribe Our Newsletter / Get Every Update -->
+      <div class="bg-primary text-surface border-t border-secondary-fixed/20">
+        <div class="max-w-7xl mx-auto px-6 md:px-12 py-6 md:py-7 flex flex-col lg:flex-row items-center justify-between gap-4">
+          <div class="text-center lg:text-left">
+            <h3 class="font-title-md md:text-lg text-white font-semibold tracking-tight">Subscribe Our Newsletter</h3>
+            <p class="font-body-sm md:text-base text-surface-container-high/75 font-light mt-0.5">Get Every Update</p>
+          </div>
+          <div class="w-full max-w-md">
+            <form id="newsletterForm" class="bg-white rounded-lg p-1 flex items-center gap-2 shadow-lg">
+              <span class="material-symbols-outlined text-base text-primary-container pl-2.5 shrink-0">mail</span>
+              <input id="newsletterEmail" type="email" required placeholder="Email Address" aria-label="Email Address" class="w-full bg-transparent border-0 focus:ring-0 text-xs sm:text-sm text-primary placeholder:text-on-surface-variant/60 px-1.5 py-1.5">
+              <button type="submit" class="gold-shimmer text-primary font-montserrat text-[11px] font-bold uppercase tracking-wider px-4 py-2 rounded-md shadow-sm hover:shadow-md transition-all duration-200 inline-flex items-center gap-1 shrink-0">
+                <span>Subscribe</span>
+                <span class="material-symbols-outlined text-xs">arrow_forward</span>
+              </button>
+            </form>
+            <p id="newsletterFeedback" class="hidden text-xs text-secondary-fixed mt-1.5 text-center lg:text-left font-medium">Thank you for subscribing to BROTHERS Nails &amp; Lashes updates!</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========================================================================= -->
+  <!-- 7. FOOTER (Shared Component: Footer)                                      -->
+  <!-- ========================================================================= -->
+  <footer class="w-full border-t border-secondary-fixed/30 bg-primary-container text-surface-container-high transition-colors duration-200 relative overflow-hidden">
+    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 h-[1px] bg-gradient-to-r from-transparent via-secondary-fixed/40 to-transparent pointer-events-none"></div>
+    <div class="absolute -top-32 right-12 w-96 h-96 bg-secondary-fixed/10 rounded-full blur-3xl pointer-events-none"></div>
+    <div class="w-full max-w-7xl mx-auto px-6 md:px-12 pt-16 pb-12 relative z-10">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-8 pb-14 border-b border-secondary-fixed/20">
+        <!-- Brand Column (6 cols) -->
+        <div class="lg:col-span-6 space-y-5">
+          <a aria-label="Brothers Nails &amp; Lashes" class="inline-block group focus:outline-none" href="index.html">
+            <img alt="Brothers Nails &amp; Lashes" class="h-12 md:h-20 w-auto object-contain brightness-110 drop-shadow transition-transform duration-300 group-hover:scale-105" src="assets/images/brand/horizontal-logo-transparent.png">
+          </a>
+          <p class="font-body-md text-surface-container-high/90 max-w-md leading-relaxed">
+            A place for fresh nails, lovely lashes, and your next favorite look. At BROTHERS Nails & Lashes, we make every detail count, so you can leave feeling beautiful and confident
+          </p>
+          <div class="flex items-center gap-3 pt-1">
+            <a aria-label="Google Maps" title="Google Maps" class="w-10 h-10 rounded-full bg-primary/60 border border-secondary-fixed/30 flex items-center justify-center text-secondary-fixed hover:bg-secondary-fixed hover:text-primary hover:shadow-lg transition-all duration-300" href="https://www.google.com/maps/search/?api=1&amp;query=78982+CA-111+Suite+1B+La+Quinta+CA+92253" target="_blank" rel="noopener noreferrer">
+              <span class="material-symbols-outlined text-lg" data-icon="location_on">location_on</span>
+            </a>
+            <a aria-label="Call Brothers Nails &amp; Lashes" title="Call (760) 300-0112" class="w-10 h-10 rounded-full bg-primary/60 border border-secondary-fixed/30 flex items-center justify-center text-secondary-fixed hover:bg-secondary-fixed hover:text-primary hover:shadow-lg transition-all duration-300" href="tel:7603000112">
+              <span class="material-symbols-outlined text-lg" data-icon="call">call</span>
+            </a>
+            <a aria-label="Instagram @brothersnailslashes" title="Instagram @brothersnailslashes" class="w-10 h-10 rounded-full bg-primary/60 border border-secondary-fixed/30 flex items-center justify-center text-secondary-fixed hover:bg-secondary-fixed hover:text-primary hover:shadow-lg transition-all duration-300" href="https://www.instagram.com/brothersnailslashes" target="_blank" rel="noopener noreferrer">
+              <svg class="w-[18px] h-[18px]" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true">
+                <rect width="20" height="20" x="2" y="2" rx="5" ry="5"/>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/>
+              </svg>
+            </a>
+            <a aria-label="Facebook Brothers Nails &amp; Lashes" title="Facebook" class="w-10 h-10 rounded-full bg-primary/60 border border-secondary-fixed/30 flex items-center justify-center text-secondary-fixed hover:bg-secondary-fixed hover:text-primary hover:shadow-lg transition-all duration-300" href="https://www.facebook.com/brothersnailslashes" target="_blank" rel="noopener noreferrer">
+              <svg class="w-[18px] h-[18px]" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+        <!-- Explore Links (3 cols) -->
+        <div class="lg:col-span-3 space-y-4">
+          <p class="font-label-lg font-semibold tracking-widest text-secondary-fixed uppercase text-xs">Explore</p>
+          <ul class="space-y-2.5 font-body-sm text-surface-container-high/85">
+            <li><a class="text-secondary-fixed font-semibold transition-colors duration-200 inline-flex items-center gap-1.5" href="index.html">Home</a></li>
+            <li><a class="hover:text-secondary-fixed transition-colors duration-200 inline-flex items-center gap-1.5" href="about.html">About</a></li>
+            <li><a class="hover:text-secondary-fixed transition-colors duration-200 inline-flex items-center gap-1.5" href="services.html">Services</a></li>
+            <li><a class="hover:text-secondary-fixed transition-colors duration-200 inline-flex items-center gap-1.5" href="gallery.html">Gallery</a></li>
+            <li><a class="hover:text-secondary-fixed transition-colors duration-200 inline-flex items-center gap-1.5" href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <!-- Help Links (3 cols) -->
+        <div class="lg:col-span-3 space-y-4">
+          <p class="font-label-lg font-semibold tracking-widest text-secondary-fixed uppercase text-xs">Help</p>
+          <ul class="space-y-2.5 font-body-sm text-surface-container-high/85">
+            <li><a class="hover:text-secondary-fixed transition-colors duration-200 inline-flex items-center gap-1.5" href="#booking" data-booking>Book Online</a></li>
+            <li><a class="hover:text-secondary-fixed transition-colors duration-200 inline-flex items-center gap-1.5" href="#faq">FAQ's</a></li>
+            <li><a class="hover:text-secondary-fixed transition-colors duration-200 inline-flex items-center gap-1.5" href="#policy">Salon Policy</a></li>
+          </ul>
+        </div>
+      </div>
+      <!-- Bottom Bar & Legal Links -->
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 font-body-sm text-xs text-on-primary-container">
+        <p>© 2026 BROTHERS Nails &amp; Lashes. All rights reserved</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,363 @@
+/* Brothers Nails & Lashes - Palm Desert Royal Sanctuary Custom Styles */
+
+@font-face {
+  font-family: 'Haggia';
+  src: url('../fonts/HaggiaDemoRegular-DYlMW-BF6aab95218caa6.ttf') format('truetype');
+  font-weight: 400 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Rossce';
+  src: url('../fonts/ROSSCE-BF6abe61ab9549d.otf') format('opentype');
+  font-weight: 400 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Rolend';
+  src: url('../fonts/Rolend-BF6ab62221b3caf.otf') format('opentype');
+  font-weight: 400 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Vireon';
+  src: url('../fonts/Vireon-BF6aeefff220a5f.ttf') format('truetype');
+  font-weight: 400 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Windels';
+  src: url('../fonts/Windels-BF6ae93e721d911.ttf') format('truetype');
+  font-weight: 400 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+.font-haggia {
+  font-family: 'Haggia', serif;
+}
+
+.font-rossce {
+  font-family: 'Rossce', serif;
+}
+
+.font-rolend {
+  font-family: 'Rolend', serif;
+}
+
+.font-vireon {
+  font-family: 'Vireon', sans-serif;
+}
+
+.font-windels {
+  font-family: 'Windels', serif;
+}
+
+.font-montserrat {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 1;
+}
+
+.gold-shimmer {
+  background: linear-gradient(135deg, #dfb76c 0%, #ffe088 50%, #c5a059 100%);
+}
+
+/* Hero CTA Hover Effects */
+.hero-cta-primary,
+.hero-cta-secondary {
+  transition: transform 0.25s cubic-bezier(0.22, 1, 0.36, 1),
+              box-shadow 0.25s cubic-bezier(0.22, 1, 0.36, 1),
+              background 0.25s ease,
+              border-color 0.25s ease,
+              color 0.25s ease;
+}
+
+.hero-cta-primary:hover {
+  background: linear-gradient(135deg, #ffe088 0%, #fff2b8 50%, #dfb76c 100%);
+  transform: translateY(-3px) scale(1.04);
+  box-shadow: 0 10px 26px -4px rgba(233, 195, 73, 0.55);
+}
+
+.hero-cta-primary:active,
+.hero-cta-secondary:active {
+  transform: translateY(0) scale(0.98);
+}
+
+.hero-cta-secondary:hover {
+  background-color: #ffffff;
+  border-color: #dfb76c;
+  transform: translateY(-3px) scale(1.04);
+  box-shadow: 0 10px 26px -4px rgba(255, 224, 136, 0.38);
+}
+
+.gold-text-shimmer {
+  background: linear-gradient(135deg, #d4af37 0%, #ffe088 50%, #b8912d 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gold-border-glow {
+  border: 1px solid rgba(212, 175, 55, 0.35);
+  box-shadow: 0 0 15px rgba(212, 175, 55, 0.08);
+}
+
+.gold-border-subtle,
+.gold-hairline,
+.gold-border-hairline {
+  border: 1px solid rgba(212, 175, 55, 0.25);
+}
+
+.emerald-border-hairline {
+  border: 1px solid rgba(8, 52, 45, 0.12);
+}
+
+.emerald-glow {
+  box-shadow: 0 16px 36px -8px rgba(8, 52, 45, 0.16);
+}
+
+.arch-frame {
+  border-radius: 9999px 9999px 2rem 2rem;
+}
+
+.arch-curve {
+  border-top-left-radius: 120px;
+  border-top-right-radius: 120px;
+}
+
+.arch-curve-sm {
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+}
+
+.tab-leader {
+  border-bottom: 1px dotted rgba(113, 121, 118, 0.35);
+}
+
+/* Header Logo Styling on Light Background */
+.brand-logo-header {
+  filter: drop-shadow(0 1px 2px rgba(8, 52, 45, 0.18));
+}
+
+/* Infinite Top Bar Marquee Animation */
+@keyframes marqueeScroll {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+.marquee-track {
+  display: inline-flex;
+  width: max-content;
+  animation: marqueeScroll 32s linear infinite;
+}
+
+.marquee-track:hover {
+  animation-play-state: paused;
+}
+
+/* Modal Backdrop & Transitions */
+.modal-backdrop {
+  background-color: rgba(0, 30, 25, 0.72);
+  backdrop-filter: blur(6px);
+}
+
+/* Custom Scrollbar for Booking Modal */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #f8f3ee;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #c5a059;
+  border-radius: 9999px;
+}
+
+/* Contact Info Social Link Row Hover */
+.contact-social-link .social-icon {
+  transition: transform 0.25s cubic-bezier(0.22, 1, 0.36, 1), color 0.25s ease;
+}
+
+.contact-social-link:hover .social-icon {
+  color: #735c00;
+  transform: scale(1.12);
+}
+
+.contact-social-link .social-arrow {
+  opacity: 0;
+  transform: translateX(-4px);
+  transition: opacity 0.25s ease, transform 0.25s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.contact-social-link:hover .social-arrow {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Signature Services Spotlight Stage Carousel */
+.service-slide-card {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform-origin: center center;
+  background-color: #f6f2eb;
+  border: 1px solid rgba(8, 52, 45, 0.08);
+  box-shadow: 0 6px 18px rgba(8, 52, 45, 0.05);
+  transition: border-color 0.35s ease,
+              box-shadow 0.45s cubic-bezier(0.22, 1, 0.36, 1),
+              background-color 0.35s ease;
+  will-change: transform;
+}
+
+.service-slide-card.is-active {
+  cursor: default;
+  background-color: #ffffff;
+  border: 1.5px solid rgba(197, 155, 56, 0.92);
+  box-shadow: 0 30px 65px -12px rgba(8, 52, 45, 0.24),
+              0 12px 28px -6px rgba(197, 155, 56, 0.25);
+}
+
+.service-slide-card .service-card-divider {
+  width: 2rem;
+  background-color: #d6cbb3;
+  transition: width 0.4s cubic-bezier(0.22, 1, 0.36, 1), background-color 0.35s ease;
+}
+
+.service-slide-card.is-active .service-card-divider {
+  width: 3.25rem;
+  background-color: #c59b38;
+}
+
+.service-slide-card .service-card-desc {
+  max-height: 0;
+  margin-top: 0;
+  overflow: hidden;
+  transition: max-height 0.45s cubic-bezier(0.22, 1, 0.36, 1),
+              margin-top 0.35s ease;
+}
+
+.service-slide-card.is-active .service-card-desc {
+  max-height: 150px;
+  margin-top: 0.5rem;
+}
+
+.service-slide-card .service-card-img {
+  transition: transform 0.55s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.service-slide-card.is-active .service-card-img {
+  transform: scale(1.04);
+}
+
+.service-slide-card .service-card-cta {
+  border: 1px solid rgba(8, 52, 45, 0.2);
+  color: rgba(0, 30, 25, 0.72);
+  background-color: transparent;
+  transition: background 0.3s ease, border-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease, transform 0.25s ease;
+}
+
+.service-slide-card.is-active .service-card-cta {
+  border-color: transparent;
+  background: linear-gradient(135deg, #dfb76c 0%, #ffe088 50%, #c5a059 100%);
+  color: #001e19;
+  box-shadow: 0 6px 18px rgba(197, 155, 56, 0.32);
+}
+
+.service-slide-card.is-active .service-card-cta:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 22px rgba(197, 155, 56, 0.45);
+}
+
+/* Our Masterpieces — Showcase Equator Split Deck */
+.equator-pill-mask {
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, #000 18%, #000 82%, transparent 100%);
+  mask-image: linear-gradient(to bottom, transparent 0%, #000 18%, #000 82%, transparent 100%);
+}
+
+@media (max-width: 1023px) {
+  .equator-pill-mask {
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, #000 12%, #000 88%, transparent 100%);
+    mask-image: linear-gradient(to right, transparent 0%, #000 12%, #000 88%, transparent 100%);
+  }
+}
+
+.equator-pill {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  color: rgba(255, 255, 255, 0.84);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  transition: background-color 0.28s ease, color 0.28s ease, border-color 0.28s ease, box-shadow 0.28s ease;
+  will-change: transform, opacity;
+  white-space: nowrap;
+}
+
+.equator-pill:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 224, 136, 0.55);
+  color: #ffffff;
+}
+
+.equator-pill.is-active {
+  background: #ffffff;
+  border-color: #ffffff;
+  color: #001e19;
+  box-shadow: 0 12px 32px rgba(0, 14, 11, 0.35), 0 0 0 1px rgba(255, 224, 136, 0.35);
+}
+
+.equator-deck-card {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform-origin: center center;
+  box-shadow: 0 22px 50px -12px rgba(0, 30, 25, 0.26), 0 8px 20px -6px rgba(0, 30, 25, 0.12);
+  will-change: transform, opacity;
+}
+
+/* Welcome Banner & Contact Info — Inspiration2 Scroll Depth-Focus Rise */
+.welcome-word {
+  transform-origin: center bottom;
+  will-change: transform, opacity, filter;
+}
+
+#welcomeAccentLine {
+  transform-origin: center center;
+  will-change: transform, opacity, filter;
+}
+
+#contactInfoHeader,
+#contactInfoGrid {
+  transform-origin: center top;
+  will-change: transform, opacity, filter;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .welcome-word,
+  #welcomeAccentLine,
+  #welcomeBannerBg,
+  #contactInfoHeader,
+  #contactInfoGrid {
+    transform: none !important;
+    filter: none !important;
+    opacity: 1 !important;
+  }
+}
